@@ -2,9 +2,11 @@
 @import "helpers/variables";
 
 // shared components
+@import "components/layout/generic-layout-styles";
 @import "components/layout/left-sidebar";
 @import "components/layout/page-content-container";
 @import "components/layout/page-header";
+@import "components/content-blocks";
 
 // individual pages
 @import "pages/home";
