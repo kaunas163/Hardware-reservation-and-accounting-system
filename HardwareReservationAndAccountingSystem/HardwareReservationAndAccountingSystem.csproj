@@ -236,6 +236,12 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Content\sass\main.scss" />
+    <Content Include="Content\sass\helpers\variables.scss" />
+    <Content Include="Content\sass\components\layout\left-sidebar.scss" />
+    <Content Include="Content\sass\components\layout\page-content-container.scss" />
+    <Content Include="Content\sass\components\layout\page-header.scss" />
+    <Content Include="Content\sass\pages\home.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
