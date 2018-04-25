@@ -20,8 +20,15 @@ namespace HardwareReservationAndAccountingSystem.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Equipment> Equipments { get; set; }
+        public DbSet<EquipmentBundle> EquipmentBundles { get; set; }
+        public DbSet<ReservationStatus> ReservationStatuses { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+//            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("SQLServerConnection", throwIfV1Schema: false)
         {
         }
 
