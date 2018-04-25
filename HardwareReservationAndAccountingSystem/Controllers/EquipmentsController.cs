@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using HardwareReservationAndAccountingSystem.Models;
 
 namespace HardwareReservationAndAccountingSystem.Controllers
@@ -18,7 +19,7 @@ namespace HardwareReservationAndAccountingSystem.Controllers
 
         public ActionResult Index()
         {
-            var equipments = _context.Equipments.ToList();
+            var equipments = _context.Equipments.OrderBy(x => x.Title).ToList();
             return View(equipments);
         }
 

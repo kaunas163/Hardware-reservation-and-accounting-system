@@ -228,6 +228,10 @@
     <Compile Include="Migrations\201804250515419_AddNotifications.Designer.cs">
       <DependentUpon>201804250515419_AddNotifications.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804250643526_AddDescriptionToEquipmentBundles.cs" />
+    <Compile Include="Migrations\201804250643526_AddDescriptionToEquipmentBundles.Designer.cs">
+      <DependentUpon>201804250643526_AddDescriptionToEquipmentBundles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Equipment.cs" />
@@ -397,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804250515419_AddNotifications.resx">
       <DependentUpon>201804250515419_AddNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804250643526_AddDescriptionToEquipmentBundles.resx">
+      <DependentUpon>201804250643526_AddDescriptionToEquipmentBundles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
