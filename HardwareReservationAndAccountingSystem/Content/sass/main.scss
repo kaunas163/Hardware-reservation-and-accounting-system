@@ -6,8 +6,10 @@
 @import "components/layout/left-sidebar";
 @import "components/layout/page-content-container";
 @import "components/layout/page-header";
+@import "components/content-grids/list";
 @import "components/content-blocks";
 
 // individual pages
 @import "pages/home";
 @import "pages/notifications";
+@import "pages/equipment";

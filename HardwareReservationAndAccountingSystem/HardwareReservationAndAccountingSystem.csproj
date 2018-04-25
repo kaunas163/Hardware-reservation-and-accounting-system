@@ -287,6 +287,8 @@
     <Content Include="Content\sass\components\layout\generic-layout-styles.scss" />
     <Content Include="Content\sass\components\content-blocks.scss" />
     <Content Include="Content\sass\pages\notifications.scss" />
+    <Content Include="Content\sass\pages\equipment.scss" />
+    <Content Include="Content\sass\components\content-grids\list.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -358,6 +360,7 @@
     <Content Include="Views\Calendar\Index.cshtml" />
     <Content Include="Views\Equipments\Index.cshtml" />
     <Content Include="Views\EquipmentBundles\Index.cshtml" />
+    <Content Include="Views\Equipments\EquipmentForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

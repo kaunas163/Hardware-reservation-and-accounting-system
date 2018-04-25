@@ -11,8 +11,10 @@ namespace HardwareReservationAndAccountingSystem.Models
         public int Id { get; set; }
 
         [Required]
+        [Display(Name = "Pavadinimas")]
         public string Title { get; set; }
 
+        [Display(Name = "Aprašymas")]
         public string Description { get; set; }
 
         public List<EquipmentBundle> EquipmentBundles { get; set; }

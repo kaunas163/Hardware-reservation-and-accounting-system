@@ -2,46 +2,4 @@
     &.unread {
         border-left: 5px solid $colorPrimaryDarker;
     }
-
-    .topic {
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 0.9em;
-
-        p {
-            margin-bottom: 0.5em;
-        }
-    }
-
-    .excerpt {
-        font-size: 0.85em;
-        color: $colorTextSecondary;
-        opacity: 0.75;
-
-        p:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    .options {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-        .btn-secondary {
-            background: $colorSecondaryLighter;
-            border-color: $colorSecondaryLighter;
-
-            &:hover {
-                background: $colorSecondaryDarker;
-                border-color: $colorSecondaryDarker;
-            }
-        }
-
-        .more-options {
-            color: $colorTextPrimary;
-            margin-left: 1em;
-        }
-    }
 }
