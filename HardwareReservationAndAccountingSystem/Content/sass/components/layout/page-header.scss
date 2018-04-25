@@ -1,13 +1,73 @@
 ﻿.layout .page-content-container .page-header {
-    /*background: $colorAlmostWhite;*/
     padding: 1em 0 2em;
-    /*border-radius: 5px;*/
-    /*box-shadow: 0 0 20px 0 rgba(black, 0.05);*/
     margin-bottom: 2.5em;
     border-bottom: 1px solid rgba($colorTextSecondary, 0.1);
 
-    h2 {
-        font-size: 1.5em;
-        margin: 0;
+    .page-title {
+        h2 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+    }
+
+    .page-sub-nav {
+        text-align: right;
+
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+
+            li {
+                list-style: none;
+                display: inline-block;
+
+                a {
+                    color: $colorTextSecondary;
+                    display: block;
+                    border-bottom: 3px solid transparent;
+                    margin-left: 1.5em;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $colorTextPrimary;
+                        border-bottom-color: $colorTextPrimary;
+                    }
+                }
+
+                &.active {
+                    a {
+                        color: $colorTextPrimary;
+                        border-bottom-color: $colorTextPrimary;
+                    }
+                }
+            }
+        }
+    }
+    /*.filter-data {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .fa-search {
+            font-size: 1.25em;
+            margin: 0 1em;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        input {
+            display: none;
+        }
+    }*/
+
+    .page-filters {
+        margin: 1.5em 0 0;
+
+        input {
+            max-width: 300px;
+            font-size: 0.85em;
+        }
     }
 }

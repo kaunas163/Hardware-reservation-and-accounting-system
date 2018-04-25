@@ -68,15 +68,55 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 2em 5em; }
 
 .layout .page-content-container .page-header {
-  /*background: $colorAlmostWhite;*/
   padding: 1em 0 2em;
-  /*border-radius: 5px;*/
-  /*box-shadow: 0 0 20px 0 rgba(black, 0.05);*/
   margin-bottom: 2.5em;
-  border-bottom: 1px solid rgba(140, 164, 175, 0.1); }
-  .layout .page-content-container .page-header h2 {
+  border-bottom: 1px solid rgba(140, 164, 175, 0.1);
+  /*.filter-data {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .fa-search {
+            font-size: 1.25em;
+            margin: 0 1em;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        input {
+            display: none;
+        }
+    }*/ }
+  .layout .page-content-container .page-header .page-title h2 {
     font-size: 1.5em;
     margin: 0; }
+  .layout .page-content-container .page-header .page-sub-nav {
+    text-align: right; }
+    .layout .page-content-container .page-header .page-sub-nav ul {
+      padding-left: 0;
+      margin-bottom: 0; }
+      .layout .page-content-container .page-header .page-sub-nav ul li {
+        list-style: none;
+        display: inline-block; }
+        .layout .page-content-container .page-header .page-sub-nav ul li a {
+          color: #8ca4af;
+          display: block;
+          border-bottom: 3px solid transparent;
+          margin-left: 1.5em; }
+          .layout .page-content-container .page-header .page-sub-nav ul li a:hover {
+            text-decoration: none;
+            color: #344750;
+            border-bottom-color: #344750; }
+        .layout .page-content-container .page-header .page-sub-nav ul li.active a {
+          color: #344750;
+          border-bottom-color: #344750; }
+  .layout .page-content-container .page-header .page-filters {
+    margin: 1.5em 0 0; }
+    .layout .page-content-container .page-header .page-filters input {
+      max-width: 300px;
+      font-size: 0.85em; }
 
 .content-block {
   background: #F9FAFB;

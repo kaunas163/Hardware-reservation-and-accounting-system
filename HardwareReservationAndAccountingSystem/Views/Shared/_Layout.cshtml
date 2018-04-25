@@ -16,13 +16,18 @@
                 @Html.Partial("_LeftSidebar")
             </div>
             <div class="col-lg-10 col-md-12 page-content-container">
-                @if (IsSectionDefined("PageHeader"))
-                {
-                    <div class="page-header">
-                        @RenderSection("PageHeader")
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col page-title">
+                            @RenderSection("PageHeaderTitle")
+                        </div>
+                        <div class="col page-sub-nav">
+                            @RenderSection("PageHeaderSubNavLinks", required: false)
+                        </div>
                     </div>
-                }
-                
+                    @RenderSection("PageHeaderFilters", required: false)
+                </div>
+
                 <div class="page-content">
                     @RenderBody()
                 </div>
