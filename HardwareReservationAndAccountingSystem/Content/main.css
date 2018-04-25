@@ -11,8 +11,8 @@ h1, h2, h3, h4, h5, h6, p {
   background: #F9FAFB;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   min-height: 100vh;
-  /*padding: 2em 2.5em;*/
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 0; }
   .layout .left-sidebar > div:not(.navbar-links),
   .layout .left-sidebar footer {
     margin: 2em 2.5em;
