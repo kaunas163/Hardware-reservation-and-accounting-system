@@ -1,16 +1,27 @@
 ﻿/***************************************************
- * Sidebar links, expand on click
+ * Data filtering by text with JavaScript.
 ***************************************************/
 
-//$(".left-sidebar .navbar-links .first-level > li > a").on("click", function (e) {
-//    e.preventDefault();
-//    $(this).next(".second-level").slideDown();
-//});
+$(document).ready(function () {
 
-/***************************************************
- * Data filtering
-***************************************************/
+    var searchBox = $(".page-header .page-filters .filter-by-text");
+    var dataBlocks = $(".content-block");
 
-//$(".filter-data .fa-search").on("click", function() {
-//    $(this).prev("input").toggle().focus();
-//});
+    $(searchBox).keyup(function () {
+        var searchTerm = new RegExp($(searchBox).val(), "i");
+
+        dataBlocks.filter(function() {
+            $(this).each(function () {
+
+                if ($(this).find(".heading p").text().match(searchTerm)
+                    || $(this).find(".description p").text().match(searchTerm)) {
+                    $(this).parent().show();
+                } else {
+                    $(this).parent().hide();
+                }
+
+            });
+        });
+    });
+
+});
