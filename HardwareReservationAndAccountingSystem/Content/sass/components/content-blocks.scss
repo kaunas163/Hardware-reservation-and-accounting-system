@@ -7,4 +7,10 @@
     &:hover {
         box-shadow: 0 0 12px 2px rgba(black, 0.1);
     }
+
+    &.empty-content {
+        p {
+            margin-bottom: 0;
+        }
+    }
 }

@@ -365,6 +365,7 @@
     <Content Include="Views\Equipments\Index.cshtml" />
     <Content Include="Views\EquipmentBundles\Index.cshtml" />
     <Content Include="Views\Equipments\EquipmentForm.cshtml" />
+    <Content Include="Views\EquipmentBundles\EquipmentBundleForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
