@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Pranešimai";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section PageHeader {
+    <h2>Pranešimai</h2>
+}
+
+<div class="row">
+    @for (int i = 0; i < 3; i++)
+    {
+        <div class="col-md-12 add-margin">
+            <div class="content-block notification unread">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="topic">
+                            <p>Pranešimo tema</p>
+                        </div>
+                        <div class="excerpt">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 options">
+                        <a href="#" class="btn btn-secondary">Žiūrėti</a>
+                        <a href="#" class="more-options"><i class="fas fa-ellipsis-h"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    @for (int i = 0; i < 6; i++)
+    {
+        <div class="col-md-12 add-margin">
+            <div class="content-block notification">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="topic">
+                            <p>Pranešimo tema</p>
+                        </div>
+                        <div class="excerpt">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 options">
+                        <a href="#" class="btn btn-secondary">Žiūrėti</a>
+                        <a href="#" class="more-options"><i class="fas fa-ellipsis-h"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

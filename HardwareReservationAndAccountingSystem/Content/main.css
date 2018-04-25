@@ -1,7 +1,7 @@
 body {
   background: #DEE0E3; }
 
-div[class*='col'] {
+.add-margin {
   margin-bottom: 1em; }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -81,4 +81,39 @@ h1, h2, h3, h4, h5, h6, p {
 .content-block {
   background: #F9FAFB;
   padding: 1em 2em;
-  border-radius: 5px; }
+  border-radius: 5px;
+  transition: 0.3s all; }
+  .content-block:hover {
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.1); }
+
+.notification.unread {
+  border-left: 5px solid #FF6F11; }
+
+.notification .topic {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9em; }
+  .notification .topic p {
+    margin-bottom: 0.5em; }
+
+.notification .excerpt {
+  font-size: 0.85em;
+  color: #8ca4af;
+  opacity: 0.75; }
+  .notification .excerpt p:last-child {
+    margin-bottom: 0; }
+
+.notification .options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+  .notification .options .btn-secondary {
+    background: #A5B7CC;
+    border-color: #A5B7CC; }
+    .notification .options .btn-secondary:hover {
+      background: #838683;
+      border-color: #838683; }
+  .notification .options .more-options {
+    color: #344750;
+    margin-left: 1em; }
