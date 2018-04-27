@@ -43,31 +43,29 @@
             }
         }
     }
-    /*.filter-data {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-        .fa-search {
-            font-size: 1.25em;
-            margin: 0 1em;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-
-        input {
-            display: none;
-        }
-    }*/
-
+    
     .page-filters {
         margin: 1.5em 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
 
         input {
             max-width: 300px;
             font-size: 0.85em;
+        }
+
+        .grid-options {
+            margin-left: 2em;
+
+            .fa-th-large,
+            .fa-th-list {
+                margin: 0 5px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
     }
 }

@@ -45,3 +45,20 @@ $(function () {
     });
 
 });
+
+
+/*********************************************************************
+ * Grid options.
+*********************************************************************/
+
+$(document).ready(function () {
+
+    $(".grid-options .fa-th-large").on("click", function() {
+        $(".equipment, .bundle").parent(".col-md-12").removeClass("col-md-12").addClass("col-md-4");
+    });
+
+    $(".grid-options .fa-th-list").on("click", function () {
+        $(".equipment, .bundle").parent(".col-md-4").removeClass("col-md-4").addClass("col-md-12");
+    });
+
+});

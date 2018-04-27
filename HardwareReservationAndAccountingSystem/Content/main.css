@@ -70,25 +70,7 @@ h1, h2, h3, h4, h5, h6, p {
 .layout .page-content-container .page-header {
   padding: 1em 0 2em;
   margin-bottom: 2.5em;
-  border-bottom: 1px solid rgba(140, 164, 175, 0.1);
-  /*.filter-data {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-        .fa-search {
-            font-size: 1.25em;
-            margin: 0 1em;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-
-        input {
-            display: none;
-        }
-    }*/ }
+  border-bottom: 1px solid rgba(140, 164, 175, 0.1); }
   .layout .page-content-container .page-header .page-title h2 {
     font-size: 1.5em;
     margin: 0; }
@@ -113,10 +95,21 @@ h1, h2, h3, h4, h5, h6, p {
           color: #344750;
           border-bottom-color: #344750; }
   .layout .page-content-container .page-header .page-filters {
-    margin: 1.5em 0 0; }
+    margin: 1.5em 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
     .layout .page-content-container .page-header .page-filters input {
       max-width: 300px;
       font-size: 0.85em; }
+    .layout .page-content-container .page-header .page-filters .grid-options {
+      margin-left: 2em; }
+      .layout .page-content-container .page-header .page-filters .grid-options .fa-th-large,
+      .layout .page-content-container .page-header .page-filters .grid-options .fa-th-list {
+        margin: 0 5px; }
+        .layout .page-content-container .page-header .page-filters .grid-options .fa-th-large:hover,
+        .layout .page-content-container .page-header .page-filters .grid-options .fa-th-list:hover {
+          cursor: pointer; }
 
 .list-view .heading {
   font-weight: bold;
