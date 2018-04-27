@@ -38,6 +38,12 @@
         .more-options {
             color: $colorTextPrimary;
             margin-left: 1em;
+            background: none;
+            border: none;
+
+            &::after {
+                display: none;
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿/***************************************************
+﻿/*********************************************************************
  * Data filtering by text with JavaScript.
-***************************************************/
+*********************************************************************/
 
 $(document).ready(function () {
 
@@ -22,6 +22,26 @@ $(document).ready(function () {
 
             });
         });
+    });
+
+});
+
+/*********************************************************************
+ * FullCalendar library.
+*********************************************************************/
+
+$(function () {
+
+    $('#calendar').fullCalendar({
+        selectable: true,
+        header: {
+            right: 'month,agendaWeek,agendaDay,listWeek prev,next'
+        },
+        select: function (startDate, endDate) {
+            $('#exampleModal').modal({
+                focus: true
+            });
+        }
     });
 
 });

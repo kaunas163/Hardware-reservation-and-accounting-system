@@ -3,12 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HardwareReservationAndAccountingSystem.Models;
 
 namespace HardwareReservationAndAccountingSystem.Controllers
 {
     public class NotificationsController : Controller
     {
+        private ApplicationDbContext _context = new ApplicationDbContext();
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult Details()
         {
             return View();
         }

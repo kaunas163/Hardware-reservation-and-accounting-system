@@ -251,6 +251,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fullcalendar.min.css" />
     <Content Include="Content\Gulpfile.js" />
     <Content Include="Content\main.css" />
     <Content Include="favicon.ico" />
@@ -293,17 +294,21 @@
     <Content Include="Content\sass\pages\notifications.scss" />
     <Content Include="Content\sass\pages\equipment.scss" />
     <Content Include="Content\sass\components\content-grids\list.scss" />
+    <Content Include="Content\sass\components\calendar.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\fullcalendar.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
@@ -366,6 +371,7 @@
     <Content Include="Views\EquipmentBundles\Index.cshtml" />
     <Content Include="Views\Equipments\EquipmentForm.cshtml" />
     <Content Include="Views\EquipmentBundles\EquipmentBundleForm.cshtml" />
+    <Content Include="Views\Notifications\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

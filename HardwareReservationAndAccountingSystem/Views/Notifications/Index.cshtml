@@ -23,14 +23,14 @@
 }
 
 <div class="row">
-    @for (int i = 0; i < 3; i++)
+    @for (int i = 1; i <= 3; i++)
     {
         <div class="col-md-12 add-margin">
             <div class="content-block list-view notification unread">
                 <div class="row">
                     <div class="col-md-10">
                         <div class="heading">
-                            <p>Pranešimo tema</p>
+                            <p>Neperskaityto pranešimo #@i tema</p>
                         </div>
                         <div class="description">
                             <p>
@@ -39,7 +39,9 @@
                         </div>
                     </div>
                     <div class="col-md-2 options">
-                        <a href="#" class="btn btn-secondary">Žiūrėti</a>
+                        @Html.ActionLink("Žūrėti", "Details", "Notifications", null, new {@class = "btn btn-secondary"})
+
+@*                        <a href="#" class="btn btn-secondary">Žiūrėti</a>*@
                         <a href="#" class="more-options"><i class="fas fa-ellipsis-h"></i></a>
                     </div>
                 </div>
@@ -47,14 +49,14 @@
         </div>
     }
 
-    @for (int i = 0; i < 6; i++)
+    @for (int i = 1; i <= 6; i++)
     {
         <div class="col-md-12 add-margin">
             <div class="content-block list-view notification">
                 <div class="row">
                     <div class="col-md-10">
                         <div class="heading">
-                            <p>Pranešimo tema</p>
+                            <p>Pranešimo #@i tema</p>
                         </div>
                         <div class="description">
                             <p>
