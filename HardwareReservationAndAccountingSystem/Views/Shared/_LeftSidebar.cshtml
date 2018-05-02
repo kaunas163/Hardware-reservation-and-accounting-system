@@ -9,22 +9,22 @@
 
 <div class="navbar-links">
     <ul class="first-level">
-        <li class="active">
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")">
             @Html.ActionLink("Pradžia", "Index", "Home")
         </li>
-        <li>
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Notifications" ? "active" : "")">
             @Html.ActionLink("Pranešimai", "Index", "Notifications")
         </li>
-        <li>
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Rezervations" ? "active" : "")">
             @Html.ActionLink("Rezervacijos", "Index", "Rezervations")
         </li>
-        <li>
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Calendar" ? "active" : "")">
             @Html.ActionLink("Kalendorius", "Index", "Calendar")
         </li>
-        <li>
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Equipments" ? "active" : "")">
             @Html.ActionLink("Įranga", "Index", "Equipments")
         </li>
-        <li>
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "EquipmentBundles" ? "active" : "")">
             @Html.ActionLink("Įrangos komplektai", "Index", "EquipmentBundles")
         </li>
     </ul>
