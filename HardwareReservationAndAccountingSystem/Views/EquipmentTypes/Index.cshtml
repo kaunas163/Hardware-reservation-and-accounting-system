@@ -1,4 +1,5 @@
-﻿@model IEnumerable<HardwareReservationAndAccountingSystem.Models.EquipmentType>
+﻿@using HardwareReservationAndAccountingSystem.Models
+@model IEnumerable<HardwareReservationAndAccountingSystem.Models.EquipmentType>
 
 @{
     ViewBag.Title = "Įrangos tipai";
@@ -11,8 +12,9 @@
 
 @section PageHeaderSubNavLinks {
     <ul>
-        <li class="active"><a href="#">Visi įrangos tipai</a></li>
-        <li><a href="#" data-toggle="modal" data-target="#newEquipmentModal">Naujas tipas</a></li>
+@*        <li class="active"><a href="#">Visi įrangos tipai</a></li>*@
+        <li class="active">@Html.ActionLink("Visi įrangos tipai", "Index", "EquipmentTypes")</li>
+        <li><a href="#" data-toggle="modal" data-target="#newEquipmentTypeModal">Naujas tipas</a></li>
     </ul>
 }
 
@@ -29,14 +31,14 @@
 <div class="row">
     @if (Model.Any())
     {
-        foreach (var equipment in Model)
+        foreach (var equipmentType in Model)
         {
             <div class="col-md-12 add-margin">
-                <div class="content-block list-view equipment">
+                <div class="content-block list-view equipment-type">
                     <div class="row">
                         <div class="col-md-10">
                             <div class="heading">
-                                <p>@equipment.Title</p>
+                                <p>@equipmentType.Title</p>
                             </div>
                         </div>
                         <div class="col-md-2 options">
@@ -69,17 +71,10 @@
     }
 </div>
 
-<div class="modal fade" id="newEquipmentModal" tabindex="-1" role="dialog" aria-labelledby="newEquipmentModalLabel" aria-hidden="true">
+<div class="modal fade" id="newEquipmentTypeModal" tabindex="-1" role="dialog" aria-labelledby="newEquipmentTypeModal" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-@*            @{*@
-@*                var model = new EquipmentForm*@
-@*                {*@
-@*                    Equipment = new Equipment(),*@
-@*                    EquipmentTypes = Model.EquipmentTypes*@
-@*                };*@
-@*            }*@
-@*            @Html.Partial("EquipmentForm", model)*@
+            @Html.Partial("EquipmentTypeForm", new EquipmentType())
         </div>
     </div>
 </div>

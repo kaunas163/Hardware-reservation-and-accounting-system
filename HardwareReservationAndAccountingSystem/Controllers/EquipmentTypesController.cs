@@ -18,8 +18,26 @@ namespace HardwareReservationAndAccountingSystem.Controllers
 
         public ActionResult Index()
         {
-            var types = _context.EquipmentTypes.ToList();
+            var types = _context.EquipmentTypes.OrderBy(x => x.Title).ToList();
             return View(types);
+        }
+
+        [HttpPost]
+        public ActionResult Save(EquipmentType type)
+        {
+            if (type.Id == 0)
+            {
+                _context.EquipmentTypes.Add(type);
+            }
+            else
+            {
+                var typeInDb = _context.EquipmentTypes.Single(x => x.Id == type.Id);
+                typeInDb.Title = type.Title;
+                typeInDb.Color = type.Color;
+            }
+
+            _context.SaveChanges();
+            return RedirectToAction("Index", "EquipmentTypes");
         }
     }
 }
