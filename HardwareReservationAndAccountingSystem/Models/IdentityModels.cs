@@ -21,6 +21,7 @@ namespace HardwareReservationAndAccountingSystem.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Equipment> Equipments { get; set; }
+        public DbSet<EquipmentType> EquipmentTypes { get; set; }
         public DbSet<EquipmentBundle> EquipmentBundles { get; set; }
         public DbSet<ReservationStatus> ReservationStatuses { get; set; }
         public DbSet<Reservation> Reservations { get; set; }

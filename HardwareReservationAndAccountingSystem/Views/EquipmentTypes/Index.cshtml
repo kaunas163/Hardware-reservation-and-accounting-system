@@ -1,20 +1,18 @@
-﻿@using HardwareReservationAndAccountingSystem.Models
-@using HardwareReservationAndAccountingSystem.ViewModels
-@model EquipmentsMain
+﻿@model IEnumerable<HardwareReservationAndAccountingSystem.Models.EquipmentType>
 
 @{
-    ViewBag.Title = "Įranga";
+    ViewBag.Title = "Įrangos tipai";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section PageHeaderTitle {
-    <h2>Įranga</h2>
+    <h2>Įrangos tipai</h2>
 }
 
 @section PageHeaderSubNavLinks {
     <ul>
-        <li class="active"><a href="#">Visa įranga</a></li>
-        <li><a href="#" data-toggle="modal" data-target="#newEquipmentModal">Nauja įranga</a></li>
+        <li class="active"><a href="#">Visi įrangos tipai</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#newEquipmentModal">Naujas tipas</a></li>
     </ul>
 }
 
@@ -29,9 +27,9 @@
 }
 
 <div class="row">
-    @if (Model.Equipments.Any())
+    @if (Model.Any())
     {
-        foreach (var equipment in Model.Equipments)
+        foreach (var equipment in Model)
         {
             <div class="col-md-12 add-margin">
                 <div class="content-block list-view equipment">
@@ -40,13 +38,10 @@
                             <div class="heading">
                                 <p>@equipment.Title</p>
                             </div>
-                            <div class="description">
-                                <p>@equipment.Description</p>
-                            </div>
                         </div>
                         <div class="col-md-2 options">
                             <a href="#" class="btn btn-secondary">Žiūrėti</a>
-                            
+
                             <div class="dropdown">
                                 <a class="btn btn-secondary more-options dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-ellipsis-h"></i>
@@ -68,7 +63,7 @@
     {
         <div class="col-md-12 add-margin">
             <div class="content-block empty-content">
-                <p>Šiuo metu nėra pridėtos jokios įrangos.</p>
+                <p>Šiuo metu nėra pridėto jokio įrangos tipo.</p>
             </div>
         </div>
     }
@@ -77,14 +72,14 @@
 <div class="modal fade" id="newEquipmentModal" tabindex="-1" role="dialog" aria-labelledby="newEquipmentModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            @{
-                var model = new EquipmentForm
-                {
-                    Equipment = new Equipment(),
-                    EquipmentTypes = Model.EquipmentTypes
-                };
-            }
-            @Html.Partial("EquipmentForm", model)
+@*            @{*@
+@*                var model = new EquipmentForm*@
+@*                {*@
+@*                    Equipment = new Equipment(),*@
+@*                    EquipmentTypes = Model.EquipmentTypes*@
+@*                };*@
+@*            }*@
+@*            @Html.Partial("EquipmentForm", model)*@
         </div>
     </div>
 </div>

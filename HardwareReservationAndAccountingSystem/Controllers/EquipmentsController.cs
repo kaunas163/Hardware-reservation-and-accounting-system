@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using HardwareReservationAndAccountingSystem.Models;
+using HardwareReservationAndAccountingSystem.ViewModels;
 
 namespace HardwareReservationAndAccountingSystem.Controllers
 {
@@ -20,7 +21,13 @@ namespace HardwareReservationAndAccountingSystem.Controllers
         public ActionResult Index()
         {
             var equipments = _context.Equipments.OrderBy(x => x.Title).ToList();
-            return View(equipments);
+            var types = _context.EquipmentTypes.ToList();
+            var viewModel = new EquipmentsMain
+            {
+                Equipments = equipments,
+                EquipmentTypes = types
+            };
+            return View(viewModel);
         }
 
         [HttpPost]
@@ -35,6 +42,7 @@ namespace HardwareReservationAndAccountingSystem.Controllers
                 var equipmentInDb = _context.Equipments.Single(x => x.Id == equipment.Id);
                 equipmentInDb.Title = equipment.Title;
                 equipmentInDb.Description = equipment.Description;
+                equipmentInDb.EquipmentTypeId = equipment.EquipmentTypeId;
             }
 
             _context.SaveChanges();
