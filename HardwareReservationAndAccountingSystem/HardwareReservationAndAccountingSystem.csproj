@@ -303,6 +303,7 @@
     <Content Include="Content\sass\pages\equipment.scss" />
     <Content Include="Content\sass\components\content-grids\list.scss" />
     <Content Include="Content\sass\components\calendar.scss" />
+    <Content Include="Content\sass\pages\equipment-type.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\fullcalendar.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

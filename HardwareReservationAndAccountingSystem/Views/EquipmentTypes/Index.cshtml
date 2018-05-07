@@ -1,5 +1,5 @@
 ﻿@using HardwareReservationAndAccountingSystem.Models
-@model IEnumerable<HardwareReservationAndAccountingSystem.Models.EquipmentType>
+@model IEnumerable<EquipmentType>
 
 @{
     ViewBag.Title = "Įrangos tipai";
@@ -12,7 +12,6 @@
 
 @section PageHeaderSubNavLinks {
     <ul>
-@*        <li class="active"><a href="#">Visi įrangos tipai</a></li>*@
         <li class="active">@Html.ActionLink("Visi įrangos tipai", "Index", "EquipmentTypes")</li>
         <li><a href="#" data-toggle="modal" data-target="#newEquipmentTypeModal">Naujas tipas</a></li>
     </ul>
@@ -34,7 +33,7 @@
         foreach (var equipmentType in Model)
         {
             <div class="col-md-12 add-margin">
-                <div class="content-block list-view equipment-type">
+                <div class="content-block list-view equipment-type" style="border-left: 5px solid @equipmentType.Color">
                     <div class="row">
                         <div class="col-md-10">
                             <div class="heading">
