@@ -21,7 +21,7 @@ namespace HardwareReservationAndAccountingSystem
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
-                      "~/Scripts/bootstrap.js",
+//                      "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js",
                       "~/Scripts/moment.min.js",
                       "~/Scripts/fullcalendar.min.js",
