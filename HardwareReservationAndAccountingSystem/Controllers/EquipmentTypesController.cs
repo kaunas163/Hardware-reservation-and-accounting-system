@@ -39,5 +39,16 @@ namespace HardwareReservationAndAccountingSystem.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index", "EquipmentTypes");
         }
+
+        //public ActionResult Edit(int id)
+        //{
+        //    var type = _context.EquipmentTypes.SingleOrDefault(x => x.Id == id);
+
+        //    if (type == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+
+        //}
     }
 }
