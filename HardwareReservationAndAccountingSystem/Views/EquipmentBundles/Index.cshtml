@@ -11,7 +11,7 @@
 
 @section PageHeaderSubNavLinks {
     <ul>
-        <li class="active"><a href="#">Visi įrangos komplektai</a></li>
+        <li class="active">@Html.ActionLink("Visi įrangos komplektai", "Index", "EquipmentBundles")</li>
         <li><a href="#" data-toggle="modal" data-target="#newEquipmentBundleModal">Naujas komplektas</a></li>
     </ul>
 }
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 options">
-                            <a href="#" class="btn btn-secondary">Žiūrėti</a>
+@*                            <a href="#" class="btn btn-secondary">Žiūrėti</a>*@
 
                             <div class="dropdown">
                                 <a class="btn btn-secondary more-options dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -51,9 +51,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editEquipmentBundleModal-@bundle.Id">Atnaujinti</a>
+                                    @*<a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>*@
                                 </div>
                             </div>
                         </div>
@@ -79,3 +79,14 @@
         </div>
     </div>
 </div>
+
+@foreach (var bundle in Model)
+{
+    <div class="modal fade" id="editEquipmentBundleModal-@bundle.Id" tabindex="-1" role="dialog" aria-labelledby="editEquipmentBundleModal-@bundle.Id" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                @Html.Partial("EquipmentBundleForm", bundle)
+            </div>
+        </div>
+    </div>
+}

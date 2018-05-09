@@ -3,7 +3,7 @@
 @using (Html.BeginForm("Save", "EquipmentBundles"))
 {
     <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Naujos įrangos įvedimas</h5>
+        <h5 class="modal-title" id="exampleModalLabel">@(Model.Id == 0 ? "Naujo komplekto įvedimas" : "Komplekto atnaujinimas")</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
