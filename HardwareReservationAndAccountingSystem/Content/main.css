@@ -110,6 +110,17 @@ h1, h2, h3, h4, h5, h6, p {
         .layout .page-content-container .page-header .page-filters .grid-options .fa-th-large:hover,
         .layout .page-content-container .page-header .page-filters .grid-options .fa-th-list:hover {
           cursor: pointer; }
+    .layout .page-content-container .page-header .page-filters .equipment-types {
+      margin-left: 1em; }
+      .layout .page-content-container .page-header .page-filters .equipment-types span {
+        background: white;
+        padding: 5px 10px;
+        margin-left: 1em;
+        border-radius: 5px;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer; }
 
 .list-view .heading {
   font-weight: bold;
@@ -148,7 +159,8 @@ h1, h2, h3, h4, h5, h6, p {
   background: #F9FAFB;
   padding: 1em 2em;
   border-radius: 5px;
-  transition: 0.3s all; }
+  transition: 0.3s all;
+  height: 100%; }
   .content-block:hover {
     box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.1); }
   .content-block.empty-content p {

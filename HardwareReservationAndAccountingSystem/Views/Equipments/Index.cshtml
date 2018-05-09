@@ -25,6 +25,12 @@
             <i class="fas fa-th-large"></i>
             <i class="fas fa-th-list"></i>
         </div>
+        <div class="equipment-types">
+            @foreach (var type in Model.EquipmentTypes)
+            {
+                <span style="border-left: 5px solid @type.Color">@type.Title</span>
+            }
+        </div>
     </div>
 }
 
@@ -34,7 +40,7 @@
         foreach (var equipment in Model.Equipments)
         {
             <div class="col-md-12 add-margin">
-                <div class="content-block list-view equipment">
+                <div class="content-block list-view equipment" style="border-left: 5px solid @equipment.EquipmentType.Color">
                     <div class="row">
                         <div class="col-md-10">
                             <div class="heading">

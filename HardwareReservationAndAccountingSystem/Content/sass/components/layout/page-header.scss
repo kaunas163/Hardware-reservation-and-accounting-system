@@ -67,5 +67,20 @@
                 }
             }
         }
+
+        .equipment-types {
+            margin-left: 1em;
+
+            span {
+                background: white;
+                padding: 5px 10px;
+                margin-left: 1em;
+                border-radius: 5px;
+                font-size: 10px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                cursor: pointer;
+            }
+        }
     }
 }
