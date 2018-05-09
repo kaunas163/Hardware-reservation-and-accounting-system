@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 options">
-                            <a href="#" class="btn btn-secondary">Žiūrėti</a>
+                            @*<a href="#" class="btn btn-secondary">Žiūrėti</a>*@
                             
                             <div class="dropdown">
                                 <a class="btn btn-secondary more-options dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -53,9 +53,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editEquipmentModalLabel-@equipment.Id">Atnaujinti</a>
+                                    @*<a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>*@
                                 </div>
                             </div>
                         </div>
@@ -88,3 +88,21 @@
         </div>
     </div>
 </div>
+
+@foreach (var equipment in Model.Equipments)
+{
+    <div class="modal fade" id="editEquipmentModalLabel-@equipment.Id" tabindex="-1" role="dialog" aria-labelledby="editEquipmentModalLabel-@equipment.Id" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                @{
+                    var model1 = new EquipmentForm
+                    {
+                        Equipment = equipment,
+                        EquipmentTypes = Model.EquipmentTypes
+                    };
+                }
+                @Html.Partial("EquipmentForm", model1)
+            </div>
+        </div>
+    </div>
+}
