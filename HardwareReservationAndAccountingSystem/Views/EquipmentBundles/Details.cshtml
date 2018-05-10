@@ -28,12 +28,13 @@
     </div>
     <div class="col-md-12 add-margin">
         <div class="content-block one-bundle">
-            <h3>Įrangos sąrašas</h3>
+            <h2>Įrangos sąrašas</h2>
         </div>
     </div>
     <div class="col-md-12 add-margin">
         <div class="content-block one-bundle">
-            <h3>Rezervacija</h3>
+            <h2>Užimtumo kalendorius</h2>
+            <div id="calendar" class="calendar-without-background"></div>
         </div>
     </div>
 </div>
@@ -50,6 +51,26 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             @Html.Partial("EquipmentBundleForm", Model)
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="calendarModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Lango pavadinimas</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Forma arba informacija
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Uždaryti</button>
+                <button type="button" class="btn btn-primary">Išsaugoti</button>
+            </div>
         </div>
     </div>
 </div>

@@ -38,7 +38,7 @@ $(function () {
             right: 'month,agendaWeek,agendaDay,listWeek prev,next'
         },
         select: function (startDate, endDate) {
-            $('#exampleModal').modal({
+            $('#exampleModal, #calendarModal').modal({
                 focus: true
             });
         }
