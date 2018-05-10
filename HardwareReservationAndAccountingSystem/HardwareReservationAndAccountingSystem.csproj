@@ -383,6 +383,7 @@
     <Content Include="Views\Notifications\Details.cshtml" />
     <Content Include="Views\EquipmentTypes\Index.cshtml" />
     <Content Include="Views\EquipmentTypes\EquipmentTypeForm.cshtml" />
+    <Content Include="Views\EquipmentBundles\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

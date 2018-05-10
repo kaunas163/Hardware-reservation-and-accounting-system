@@ -51,6 +51,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                    @Html.ActionLink("Peržiūrėti", "Details", "EquipmentBundles", new {id = bundle.Id}, new {@class = "dropdown-item"})
                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editEquipmentBundleModal-@bundle.Id">Atnaujinti</a>
                                     @*<a class="dropdown-item" href="#">Another action</a>
                                     <a class="dropdown-item" href="#">Something else here</a>*@

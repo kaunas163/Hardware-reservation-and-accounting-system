@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -38,6 +39,18 @@ namespace HardwareReservationAndAccountingSystem.Controllers
 
             _context.SaveChanges();
             return RedirectToAction("Index", "EquipmentBundles");
+        }
+
+        public ActionResult Details(int id)
+        {
+            var bundle = _context.EquipmentBundles.Include(x => x.Equipments).SingleOrDefault(x => x.Id == id);
+
+            if (bundle == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(bundle);
         }
     }
 }
