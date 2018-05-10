@@ -25,11 +25,13 @@ namespace HardwareReservationAndAccountingSystem
                       "~/Scripts/respond.js",
                       "~/Scripts/moment.min.js",
                       "~/Scripts/fullcalendar.min.js",
+                      "~/Scripts/lightbox.min.js",
                       "~/Scripts/scripts.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/fullcalendar.min.css",
+                      "~/Content/lightbox.min.css",
                       "~/Content/main.css"));
         }
     }

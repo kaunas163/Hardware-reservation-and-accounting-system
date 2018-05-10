@@ -73,3 +73,14 @@ $(document).ready(function() {
         $(".page-content .equipment[data-equipmentType='" + $(this).text() + "']").parent().toggle();
     });
 });
+
+/*********************************************************************
+ * Images lightbox for equipment bundle gallery.
+*********************************************************************/
+
+$(document).ready(function() {
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+    });
+});
