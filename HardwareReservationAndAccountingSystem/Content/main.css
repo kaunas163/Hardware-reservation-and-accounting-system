@@ -117,10 +117,13 @@ h1, h2, h3, h4, h5, h6, p {
         padding: 5px 10px;
         margin-left: 1em;
         border-radius: 5px;
-        font-size: 10px;
+        font-size: 0.6em;
         text-transform: uppercase;
         letter-spacing: 2px;
         cursor: pointer; }
+        .layout .page-content-container .page-header .page-filters .equipment-types span.disabled {
+          text-decoration: line-through;
+          opacity: 0.25; }
 
 .list-view .heading {
   font-weight: bold;

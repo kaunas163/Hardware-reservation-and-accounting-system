@@ -62,3 +62,14 @@ $(document).ready(function () {
     });
 
 });
+
+/*********************************************************************
+ * Toggle equipment types in equipment page.
+*********************************************************************/
+
+$(document).ready(function() {
+    $(".page-header .page-filters .equipment-types span").on("click", function () {
+        $(this).toggleClass("disabled");
+        $(".page-content .equipment[data-equipmentType='" + $(this).text() + "']").parent().toggle();
+    });
+});

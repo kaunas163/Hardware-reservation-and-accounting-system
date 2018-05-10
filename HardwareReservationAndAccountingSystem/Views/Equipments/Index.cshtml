@@ -40,7 +40,7 @@
         foreach (var equipment in Model.Equipments)
         {
             <div class="col-md-12 add-margin">
-                <div class="content-block list-view equipment" style="border-left: 5px solid @equipment.EquipmentType.Color">
+                <div class="content-block list-view equipment" data-equipmentType="@equipment.EquipmentType.Title" style="border-left: 5px solid @equipment.EquipmentType.Color">
                     <div class="row">
                         <div class="col-md-10">
                             <div class="heading">
