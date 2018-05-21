@@ -7,12 +7,40 @@
 }
 
 <div class="row">
-    @for (int i = 0; i < 20; i++)
-    {
-        <div class="col-md-4 col-sm-12 add-margin">
-            <div class="content-block quick-link">
-                info blokas
-            </div>
+    <div class="col-md-4 col-sm-12 add-margin">
+        <div class="content-block quick-link">
+            <i class="fas fa-bell"></i>
+            @Html.ActionLink("Pranešimai", "Index", "Notifications")
         </div>
-    }
+    </div>
+    <div class="col-md-4 col-sm-12 add-margin">
+        <div class="content-block quick-link">
+            <i class="fas fa-calendar-check"></i>
+            @Html.ActionLink("Rezervacijos", "Index", "Rezervations")
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-12 add-margin">
+        <div class="content-block quick-link">
+            <i class="fas fa-calendar-alt"></i>
+            @Html.ActionLink("Kalendorius", "Index", "Calendar")
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-12 add-margin">
+        <div class="content-block quick-link">
+            <i class="fas fa-camera"></i>
+            @Html.ActionLink("Įranga", "Index", "Equipments")
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-12 add-margin">
+        <div class="content-block quick-link">
+            <i class="fas fa-object-group"></i>
+            @Html.ActionLink("Įrangos tipai", "Index", "EquipmentTypes")
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-12 add-margin">
+        <div class="content-block quick-link">
+            <i class="fas fa-server"></i>
+            @Html.ActionLink("Įrangos komplektai", "Index", "EquipmentBundles")
+        </div>
+    </div>
 </div>

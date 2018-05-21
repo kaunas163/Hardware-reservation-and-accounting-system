@@ -177,6 +177,24 @@ h1, h2, h3, h4, h5, h6, p {
   #calendar.calendar-without-background {
     background: none; }
 
+.content-block.quick-link {
+  position: relative;
+  overflow: hidden;
+  padding: 2em; }
+  .content-block.quick-link i {
+    position: absolute;
+    font-size: 6em;
+    opacity: 0.1;
+    right: 0.25em;
+    top: 0.2em; }
+  .content-block.quick-link a {
+    color: #344750;
+    font-size: 1.25em;
+    transition: 0.2s all; }
+    .content-block.quick-link a:hover {
+      text-decoration: none;
+      color: #FF8A34; }
+
 .notification.unread {
   border-left: 5px solid #FF6F11; }
 
