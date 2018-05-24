@@ -9,7 +9,7 @@ using HardwareReservationAndAccountingSystem.ViewModels;
 
 namespace HardwareReservationAndAccountingSystem.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "admin")]
     public class EquipmentsController : Controller
     {
         private readonly ApplicationDbContext _context = new ApplicationDbContext();

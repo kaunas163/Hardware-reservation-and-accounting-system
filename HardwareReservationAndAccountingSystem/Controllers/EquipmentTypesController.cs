@@ -7,7 +7,7 @@ using HardwareReservationAndAccountingSystem.Models;
 
 namespace HardwareReservationAndAccountingSystem.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "admin")]
     public class EquipmentTypesController : Controller
     {
         private ApplicationDbContext _context = new ApplicationDbContext();
