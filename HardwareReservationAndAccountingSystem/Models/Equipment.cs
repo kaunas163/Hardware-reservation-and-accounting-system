@@ -22,5 +22,8 @@ namespace HardwareReservationAndAccountingSystem.Models
         [Display(Name = "Įrangos tipas")]
         public int EquipmentTypeId { get; set; }
         public EquipmentType EquipmentType { get; set; }
+
+        [Display(Name = "Viešai paskelbtas ir leidžiamas rezervuoti?")]
+        public bool IsAvailable { get; set; }
     }
 }

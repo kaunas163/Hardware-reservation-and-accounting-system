@@ -237,6 +237,10 @@
     <Compile Include="Migrations\201805022120378_AddEquipmentTypes.Designer.cs">
       <DependentUpon>201805022120378_AddEquipmentTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805240718377_AddAvailabilityFieldToEquipmentAndEquipmentBundles.cs" />
+    <Compile Include="Migrations\201805240718377_AddAvailabilityFieldToEquipmentAndEquipmentBundles.Designer.cs">
+      <DependentUpon>201805240718377_AddAvailabilityFieldToEquipmentAndEquipmentBundles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Equipment.cs" />
@@ -429,6 +433,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805022120378_AddEquipmentTypes.resx">
       <DependentUpon>201805022120378_AddEquipmentTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805240718377_AddAvailabilityFieldToEquipmentAndEquipmentBundles.resx">
+      <DependentUpon>201805240718377_AddAvailabilityFieldToEquipmentAndEquipmentBundles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

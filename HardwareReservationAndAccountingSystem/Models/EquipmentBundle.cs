@@ -20,5 +20,8 @@ namespace HardwareReservationAndAccountingSystem.Models
         public List<Equipment> Equipments { get; set; }
 
         public List<Reservation> Reservations { get; set; }
+
+        [Display(Name = "Viešai paskelbtas ir leidžiamas rezervuoti?")]
+        public bool IsAvailable { get; set; }
     }
 }
