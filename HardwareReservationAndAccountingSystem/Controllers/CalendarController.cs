@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace HardwareReservationAndAccountingSystem.Controllers
 {
+    [Authorize]
     public class CalendarController : Controller
     {
         public ActionResult Index()

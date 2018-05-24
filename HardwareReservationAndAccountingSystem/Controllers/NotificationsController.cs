@@ -7,6 +7,7 @@ using HardwareReservationAndAccountingSystem.Models;
 
 namespace HardwareReservationAndAccountingSystem.Controllers
 {
+    [Authorize]
     public class NotificationsController : Controller
     {
         private ApplicationDbContext _context = new ApplicationDbContext();

@@ -1,10 +1,25 @@
-﻿<div class="logo">
+﻿@using Microsoft.AspNet.Identity
+<div class="logo">
     <h1>@Html.ActionLink("Techninės įrangos rezervacija", "Index", "Home")</h1>
 </div>
 
 <div class="profile">
     <img src="http://via.placeholder.com/120x120" alt="Profile picture" />
-    <p>Vardas Pavardenis</p>
+    
+    @if (Request.IsAuthenticated)
+    {
+        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <p>@User.Identity.GetUserName()</p>
+            <p>@(User.IsInRole("admin") ? "Administratorius" : null)</p>
+
+            @*@Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })*@
+            <a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-primary btn-sm">Atsijungti</a>
+        }
+    }
+
 </div>
 
 <div class="navbar-links">

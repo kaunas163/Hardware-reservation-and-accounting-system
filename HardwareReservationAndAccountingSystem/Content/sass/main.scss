@@ -2,13 +2,14 @@
 @import "helpers/variables";
 
 // shared components
-@import "components/layout/generic-layout-styles";
-@import "components/layout/left-sidebar";
-@import "components/layout/page-content-container";
-@import "components/layout/page-header";
-@import "components/content-grids/list";
-@import "components/content-blocks";
-@import "components/calendar";
+@import "shared/layout/generic-layout-styles";
+@import "shared/layout/left-sidebar";
+@import "shared/layout/page-content-container";
+@import "shared/layout/page-header";
+@import "shared/layout/authentication-layout";
+@import "shared/content-grids/list";
+@import "shared/content-blocks";
+@import "shared/calendar";
 
 // individual pages
 @import "pages/home";

@@ -5,8 +5,12 @@
         letter-spacing: 2px;
         font-size: 0.9em;
 
-        p {
+        p, a {
             margin-bottom: 0.5em;
+        }
+
+        a {
+            color: $colorTextPrimary;
         }
     }
 

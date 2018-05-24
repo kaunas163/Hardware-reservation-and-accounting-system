@@ -36,7 +36,8 @@
                     <div class="row">
                         <div class="col-md-10">
                             <div class="heading">
-                                <p>@bundle.Title</p>
+                                <p>@*@bundle.Title*@</p>
+                                <p>@Html.ActionLink(bundle.Title, "Details", "EquipmentBundles", new { id = bundle.Id }, null)</p>
                             </div>
                             <div class="description">
                                 <p>@bundle.Description</p>
