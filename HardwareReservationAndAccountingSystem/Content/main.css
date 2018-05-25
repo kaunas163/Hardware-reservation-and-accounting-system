@@ -32,9 +32,17 @@ h1, h2, h3, h4, h5, h6, p {
     color: #8ca4af;
     font-size: 0.75em;
     letter-spacing: 2px;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-bottom: 0.25em; }
+    .layout .left-sidebar .profile p.logged-in-as-admin {
+      text-transform: capitalize;
+      color: #344750;
+      font-weight: lighter;
+      font-style: italic; }
+  .layout .left-sidebar .profile .logoff-button {
+    margin-top: 1em; }
   .layout .left-sidebar .navbar-links {
-    padding: 2em 0; }
+    margin: 2em 0; }
     .layout .left-sidebar .navbar-links ul {
       padding-left: 0;
       margin-bottom: 0; }

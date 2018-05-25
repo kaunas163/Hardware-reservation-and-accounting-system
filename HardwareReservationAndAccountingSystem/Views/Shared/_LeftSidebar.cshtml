@@ -13,10 +13,10 @@
             @Html.AntiForgeryToken()
 
             <p>@User.Identity.GetUserName()</p>
-            <p>@(User.IsInRole("admin") ? "Administratorius" : null)</p>
+            <p class="logged-in-as-admin">@(User.IsInRole("admin") ? "Administratorius" : null)</p>
 
             @*@Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })*@
-            <a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-primary btn-sm">Atsijungti</a>
+            <a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-primary btn-sm logoff-button">Atsijungti</a>
         }
     }
 

@@ -25,6 +25,7 @@ namespace HardwareReservationAndAccountingSystem.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public ActionResult Save(EquipmentBundle equipmentBundle)
         {
             if (equipmentBundle.Id == 0)

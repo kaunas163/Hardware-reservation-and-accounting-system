@@ -36,11 +36,23 @@
             font-size: 0.75em;
             letter-spacing: 2px;
             font-weight: bold;
+            margin-bottom: 0.25em;
+
+            &.logged-in-as-admin {
+                text-transform: capitalize;
+                color: $colorTextPrimary;
+                font-weight: lighter;
+                font-style: italic;
+            }
+        }
+
+        .logoff-button {
+            margin-top: 1em;
         }
     }
 
     .navbar-links {
-        padding: 2em 0;
+        margin: 2em 0;
 
         ul {
             padding-left: 0;
@@ -59,7 +71,6 @@
                 &:hover {
                     background: $colorSecondaryLighter;
                     //border-left-color: $colorSecondaryLighter !important;
-
                     a {
                         text-decoration: none;
                         color: $colorAlmostWhite !important;
