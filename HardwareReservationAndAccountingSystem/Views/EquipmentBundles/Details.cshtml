@@ -84,51 +84,29 @@
             </div>
 
             <div class="row equipment-list">
-                <div class="col-md-4">
-                    <div class="equipment">
-                        <img src="http://via.placeholder.com/200x200" alt="Nuotrauka">
-                        <h3>Įrangos pavadinimas</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
-                        </p>
+                @if (Model.Equipments.Any())
+                {
+                    foreach (var equipment in Model.Equipments)
+                    {
+                        <div class="col-md-4">
+                            <div class="equipment">
+                                <img src="http://via.placeholder.com/200x200" alt="Nuotrauka">
+                                <h3>@equipment.Title</h3>
+                                <p>
+                                    @equipment.Description
+                                </p>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="col-md-4">
+                        <div class="">
+                            <p>Šiame komplekte nėra įrangos.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="equipment">
-                        <img src="http://via.placeholder.com/200x200" alt="Nuotrauka">
-                        <h3>Įrangos pavadinimas</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="equipment">
-                        <img src="http://via.placeholder.com/200x200" alt="Nuotrauka">
-                        <h3>Įrangos pavadinimas</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="equipment">
-                        <img src="http://via.placeholder.com/200x200" alt="Nuotrauka">
-                        <h3>Įrangos pavadinimas</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="equipment">
-                        <img src="http://via.placeholder.com/200x200" alt="Nuotrauka">
-                        <h3>Įrangos pavadinimas</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
-                        </p>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </div>
