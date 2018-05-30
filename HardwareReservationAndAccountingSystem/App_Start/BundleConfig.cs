@@ -25,6 +25,7 @@ namespace HardwareReservationAndAccountingSystem
                       "~/Scripts/respond.js",
                       "~/Scripts/moment.min.js",
                       "~/Scripts/fullcalendar.min.js",
+                      "~/Scripts/fullcalendar-lt-locale.js",
                       "~/Scripts/lightbox.min.js",
                       "~/Scripts/scripts.js"));
 

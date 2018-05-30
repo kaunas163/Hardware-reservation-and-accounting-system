@@ -24,7 +24,7 @@
         <input type="text" placeholder="Filtruoti duomenis" class="form-control filter-by-text" />
         <div class="grid-options">
             <i class="fas fa-th-large"></i>
-            <i class="fas fa-th-list"></i>
+            <i class="fas fa-th-list active"></i>
         </div>
     </div>
 }
@@ -43,7 +43,16 @@
                                 <p>@Html.ActionLink(bundle.Title, "Details", "EquipmentBundles", new { id = bundle.Id }, null)</p>
                             </div>
                             <div class="description">
-                                <p>@bundle.Description</p>
+                                <p>
+                                    @if (bundle.Description.Length > 300)
+                                    {
+                                        @bundle.Description.Substring(0, 300)<text>...</text>
+                                    }
+                                    else
+                                    {
+                                        @bundle.Description
+                                    }
+                                </p>
                             </div>
                         </div>
                         <div class="col-md-2 options">

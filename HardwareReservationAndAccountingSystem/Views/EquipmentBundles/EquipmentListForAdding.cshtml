@@ -1,0 +1,35 @@
+﻿@model HardwareReservationAndAccountingSystem.ViewModels.EquipmentBundleDetails
+
+@using (Html.BeginForm("AddEquipmentToBundle", "EquipmentBundles"))
+{
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Pridėti daugiau įrangos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        @*<div class="row">
+            <div class="col-md-12">
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Filtruoti duomenis">
+            </div>
+        </div>*@
+        <div class="row equipment-list-with-checkboxes">
+            @foreach (var equipment in Model.Equipments)
+            {
+                <div class="col-md-4 column">
+                    <div class="equipment-list-item-with-checkbox">
+                        <input type="checkbox" id="@equipment.Id" name="equipmentListItems" value="@equipment.Id"/>
+                        <img src="http://via.placeholder.com/200x200"/>
+                        <p>@equipment.Title</p>
+                    </div>
+                </div>
+            }
+            @Html.HiddenFor(x => x.EquipmentBundle.Id)
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Atšaukti</button>
+        <button type="submit" class="btn btn-primary">Išsaugoti</button>
+    </div>
+}

@@ -53,7 +53,12 @@ $(function () {
 
 $(document).ready(function () {
 
-    $(".grid-options .fa-th-large").on("click", function() {
+    $(".grid-options i").on("click", function() {
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $(".grid-options .fa-th-large").on("click", function () {
         $(".equipment, .bundle, .equipment-type").parent(".col-md-12").removeClass("col-md-12").addClass("col-md-4");
     });
 
@@ -69,8 +74,18 @@ $(document).ready(function () {
 
 $(document).ready(function() {
     $(".page-header .page-filters .equipment-types span").on("click", function () {
-        $(this).toggleClass("disabled");
-        $(".page-content .equipment[data-equipmentType='" + $(this).text() + "']").parent().toggle();
+
+        $(this).removeClass("disabled");
+
+        if ($(this).attr("class") !== "all-types") {
+            $(this).siblings().addClass("disabled");
+            $(".page-content .equipment").parent().hide();
+            $(".page-content .equipment[data-equipmentType='" + $(this).text() + "']").parent().show();
+        } else {
+            $(this).siblings().removeClass("disabled");
+            $(".page-content .equipment").parent().show();
+        }
+
     });
 });
 
@@ -83,4 +98,14 @@ $(document).ready(function() {
         'resizeDuration': 200,
         'wrapAround': true
     });
+});
+
+/*********************************************************************
+ * Adding equipment to equipment bundle. Checkboxes.
+*********************************************************************/
+
+$(".equipment-list-item-with-checkbox").on("click", function() {
+    $(this).toggleClass("active");
+    var checkbox = $(this).find("input[type='checkbox']");
+    checkbox.attr("checked", !checkbox.attr("checked"));
 });

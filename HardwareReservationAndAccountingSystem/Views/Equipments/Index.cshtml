@@ -23,12 +23,13 @@
         <input type="text" placeholder="Filtruoti duomenis" class="form-control filter-by-text" />
         <div class="grid-options">
             <i class="fas fa-th-large"></i>
-            <i class="fas fa-th-list"></i>
+            <i class="fas fa-th-list active"></i>
         </div>
         <div class="equipment-types">
+            <span class="all-types" style="border-left-color: black">Visi tipai</span>
             @foreach (var type in Model.EquipmentTypes)
             {
-                <span style="border-left: 5px solid @type.Color">@type.Title</span>
+                <span style="border-left-color: @type.Color">@type.Title</span>
             }
         </div>
     </div>
@@ -47,7 +48,15 @@
                                 <p>@equipment.Title</p>
                             </div>
                             <div class="description">
-                                <p>@equipment.Description</p>
+                                @if (equipment.Description.Length > 300)
+                                {
+                                    @equipment.Description.Substring(0, 300)<text>...</text>
+                                }
+                                else
+                                {
+                                    @equipment.Description
+                                }
+                                <p></p>
                             </div>
                         </div>
                         <div class="col-md-2 options">

@@ -43,7 +43,7 @@
             }
         }
     }
-    
+
     .page-filters {
         margin: 1.5em 0 0;
         display: flex;
@@ -57,13 +57,20 @@
 
         .grid-options {
             margin-left: 2em;
+            flex-shrink: 0;
 
             .fa-th-large,
             .fa-th-list {
                 margin: 0 5px;
+                font-size: 1.25em;
+                color: $colorTextSecondary;
 
                 &:hover {
                     cursor: pointer;
+                }
+
+                &.active {
+                    color: $colorTextPrimary;
                 }
             }
         }
@@ -80,6 +87,10 @@
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 cursor: pointer;
+                display: inline-block;
+                margin-bottom: 0.5em;
+                border-left-width: 5px;
+                border-left-style: solid;
 
                 &.disabled {
                     text-decoration: line-through;
