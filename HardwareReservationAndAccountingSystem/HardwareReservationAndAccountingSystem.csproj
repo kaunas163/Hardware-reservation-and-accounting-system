@@ -241,6 +241,10 @@
     <Compile Include="Migrations\201805240718377_AddAvailabilityFieldToEquipmentAndEquipmentBundles.Designer.cs">
       <DependentUpon>201805240718377_AddAvailabilityFieldToEquipmentAndEquipmentBundles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805302312140_AddUserFieldToReservation.cs" />
+    <Compile Include="Migrations\201805302312140_AddUserFieldToReservation.Designer.cs">
+      <DependentUpon>201805302312140_AddUserFieldToReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Equipment.cs" />
@@ -445,6 +449,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805240718377_AddAvailabilityFieldToEquipmentAndEquipmentBundles.resx">
       <DependentUpon>201805240718377_AddAvailabilityFieldToEquipmentAndEquipmentBundles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805302312140_AddUserFieldToReservation.resx">
+      <DependentUpon>201805302312140_AddUserFieldToReservation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

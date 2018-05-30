@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using HardwareReservationAndAccountingSystem.Models;
 using HardwareReservationAndAccountingSystem.ViewModels;
+using Microsoft.AspNet.Identity;
 
 namespace HardwareReservationAndAccountingSystem.Controllers
 {
@@ -25,14 +26,36 @@ namespace HardwareReservationAndAccountingSystem.Controllers
             var viewModel = new ReservationPage
             {
                 EquipmentBundles = bundles,
+                Reservation = new Reservation()
             };
 
             return View(viewModel);
         }
 
-        public ActionResult Save()
+        [HttpPost]
+        [Authorize(Roles = "admin")]
+        public ActionResult Save(Reservation reservation)
         {
-            return View();
+            var bundleId = Convert.ToInt32(Request.Form["equipmentBundles"]);
+            var bundle = _context.EquipmentBundles.Single(x => x.Id == bundleId);
+
+            reservation.CreatedOn = DateTime.Now;
+            reservation.UpdatedOn = DateTime.Now;
+            if (User.IsInRole("admin"))
+            {
+                reservation.ReservationStatusId = 2;
+            }
+            else
+            {
+                reservation.ReservationStatusId = 1;
+            }
+            reservation.EquipmentBundle = bundle;
+            reservation.UserId = User.Identity.GetUserId();
+
+            _context.Reservations.Add(reservation);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
         public ActionResult Details()

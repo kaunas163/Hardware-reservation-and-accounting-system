@@ -1,4 +1,5 @@
-﻿@model HardwareReservationAndAccountingSystem.ViewModels.ReservationPage
+﻿@using Microsoft.AspNet.Identity
+@model HardwareReservationAndAccountingSystem.ViewModels.ReservationPage
 @{
     ViewBag.Title = "Rezervacijos";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,9 +12,9 @@
 @section PageHeaderSubNavLinks {
     <ul>
         <li class="active"><a href="#">Visos rezervacijos</a></li>
-        <li><a href="#">Laukiančios patvirtinimo</a></li>
+        @*<li><a href="#">Laukiančios patvirtinimo</a></li>
         <li><a href="#">Aktyvios</a></li>
-        <li><a href="#">Baigtos</a></li>
+        <li><a href="#">Baigtos</a></li>*@
     </ul>
 }
 
@@ -41,12 +42,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="formGroupExampleInput">Rezervuoti nuo</label>
-                        <input type="text" class="form-control" id="dateFrom">
+                        @Html.LabelFor(x => x.Reservation.ReservedFrom)
+                        @Html.TextBoxFor(x => x.Reservation.ReservedFrom, new {id = "dateFrom", @class = "form-control" })
                     </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput">Rezervuoti iki</label>
-                        <input type="text" class="form-control" id="dateTo">
+                        @Html.LabelFor(x => x.Reservation.ReservedTo)
+                        @Html.TextBoxFor(x => x.Reservation.ReservedTo, new { id = "dateTo", @class = "form-control" })
                     </div>
                     @*<div class="form-group">
                             <label for="formGroupExampleInput">Pasirinkite įrangos komplektą, kuris yra laisvas jūsų norimu laiku</label>
@@ -74,7 +75,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Uždaryti</button>
-                    <button type="button" class="btn btn-primary">Išsaugoti</button>
+                    <button type="submit" class="btn btn-primary">Išsaugoti</button>
                 </div>
             }
 
