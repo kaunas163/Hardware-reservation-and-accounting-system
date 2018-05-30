@@ -41,8 +41,8 @@ namespace HardwareReservationAndAccountingSystem.Controllers
             else
             {
                 var equipmentInDb = _context.Equipments.Single(x => x.Id == equipment.Id);
-                equipmentInDb.Title = equipment.Title;
-                equipmentInDb.Description = equipment.Description;
+                equipmentInDb.Title = equipment.Title.Trim();
+                equipmentInDb.Description = equipment.Description.Trim();
                 equipmentInDb.EquipmentTypeId = equipment.EquipmentTypeId;
             }
 

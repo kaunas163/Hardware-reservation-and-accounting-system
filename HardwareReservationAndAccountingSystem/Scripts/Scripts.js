@@ -38,6 +38,16 @@ $(function () {
             right: 'month,agendaWeek,agendaDay,listWeek prev,next'
         },
         select: function (startDate, endDate) {
+            $('#reservationModal').on('show.bs.modal', function (event) {
+                var modal = $(this);
+
+                var localDateFrom = $.fullCalendar.moment(startDate).format("YYYY-MM-DD HH:mm");
+                var localDateTo = $.fullCalendar.moment(endDate).format("YYYY-MM-DD HH:mm");
+
+                modal.find("#dateFrom").val(localDateFrom);
+                modal.find("#dateTo").val(localDateTo);
+            });
+
             $('#reservationModal, #equipmentBundleCalendarModal').modal({
                 focus: true
             });
@@ -101,11 +111,30 @@ $(document).ready(function() {
 });
 
 /*********************************************************************
- * Adding equipment to equipment bundle. Checkboxes.
+ * Adding equipment to equipment bundle.
+ * Or choose equipment bundle for reservation.
+ * Checkboxes or radios.
 *********************************************************************/
 
-$(".equipment-list-item-with-checkbox").on("click", function() {
-    $(this).toggleClass("active");
-    var checkbox = $(this).find("input[type='checkbox']");
-    checkbox.attr("checked", !checkbox.attr("checked"));
+$(".equipment-or-bundle-list-item-with-selection").on("click", function () {
+
+    if ($(this).hasClass("radio")) {
+        $(".equipment-or-bundle-list-item-with-selection").removeClass("active");
+        $(".equipment-or-bundle-list-item-with-selection input").attr("checked", false);
+        $(this).addClass("active");
+        $(this).find("input").attr("checked", true);
+    } else {
+        $(this).toggleClass("active");
+        var checkbox = $(this).find("input");
+        checkbox.attr("checked", !checkbox.attr("checked"));
+    }
+
 });
+
+/*********************************************************************
+ * ...
+*********************************************************************/
+
+
+
+

@@ -33,8 +33,8 @@ namespace HardwareReservationAndAccountingSystem.Controllers
             else
             {
                 var typeInDb = _context.EquipmentTypes.Single(x => x.Id == type.Id);
-                typeInDb.Title = type.Title;
-                typeInDb.Color = type.Color;
+                typeInDb.Title = type.Title.Trim();
+                typeInDb.Color = type.Color.Trim();
             }
 
             _context.SaveChanges();

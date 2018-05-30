@@ -257,6 +257,7 @@
     <Compile Include="ViewModels\EquipmentForm.cs" />
     <Compile Include="ViewModels\EquipmentsMain.cs" />
     <Compile Include="ViewModels\RemoveEquipmentFromBundle.cs" />
+    <Compile Include="ViewModels\ReservationPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -313,6 +314,7 @@
     <Content Include="Content\sass\pages\equipment-type.scss" />
     <Content Include="Content\sass\pages\equipment-bundle.scss" />
     <Content Include="Content\sass\shared\layout\authentication-layout.scss" />
+    <Content Include="Content\sass\shared\equipment-and-bundles-in-modals.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\fullcalendar-lt-locale.js" />
     <Content Include="Scripts\fullcalendar.min.js" />

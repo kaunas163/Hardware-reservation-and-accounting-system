@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using HardwareReservationAndAccountingSystem.Models;
+using HardwareReservationAndAccountingSystem.ViewModels;
 
 namespace HardwareReservationAndAccountingSystem.Controllers
 {
@@ -19,7 +20,14 @@ namespace HardwareReservationAndAccountingSystem.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var bundles = _context.EquipmentBundles.OrderBy(x => x.Title).ToList();
+
+            var viewModel = new ReservationPage
+            {
+                EquipmentBundles = bundles,
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult Save()
