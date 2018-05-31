@@ -13,16 +13,31 @@
     <ul>
         <li class="active"><a href="#">Visos rezervacijos</a></li>
         @*<li><a href="#">Laukiančios patvirtinimo</a></li>
-        <li><a href="#">Aktyvios</a></li>
-        <li><a href="#">Baigtos</a></li>*@
+            <li><a href="#">Aktyvios</a></li>
+            <li><a href="#">Baigtos</a></li>*@
     </ul>
 }
 
 @section PageHeaderFilters {
-    <div class="page-filters">
-        <input type="text" placeholder="Filtruoti duomenis" class="form-control" />
-    </div>
+    @*    <div class="page-filters">*@
+    @*        <input type="text" placeholder="Filtruoti duomenis" class="form-control" />*@
+    @*    </div>*@
 }
+
+<div class="hidden-events-data">
+    @foreach (var reservation in Model.Reservations)
+    {
+        if (User.IsInRole("admin") || reservation.UserId == User.Identity.GetUserId())
+        {
+            <div class="reservation-data-item"
+                 data-reservation-id="@reservation.Id"
+                 data-from="@reservation.ReservedFrom"
+                 data-to="@reservation.ReservedTo"
+                 data-bundle="@reservation.EquipmentBundle.Title">
+            </div>
+        }
+    }
+</div>
 
 <div class="row">
     <div id="calendar"></div>
@@ -43,7 +58,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         @Html.LabelFor(x => x.Reservation.ReservedFrom)
-                        @Html.TextBoxFor(x => x.Reservation.ReservedFrom, new {id = "dateFrom", @class = "form-control" })
+                        @Html.TextBoxFor(x => x.Reservation.ReservedFrom, new { id = "dateFrom", @class = "form-control" })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(x => x.Reservation.ReservedTo)
@@ -64,7 +79,7 @@
                                     <div class="col-md-4 column">
                                         <div class="equipment-or-bundle-list-item-with-selection radio">
                                             <input type="radio" name="equipmentBundles" value="@bundle.Id" />
-                                            <img src="http://via.placeholder.com/200x200"/>
+                                            <img src="http://via.placeholder.com/200x200" />
                                             <p>@bundle.Title</p>
                                         </div>
                                     </div>
@@ -79,6 +94,28 @@
                 </div>
             }
 
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Rezervacija</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="title"></p>
+                <p class="from"></p>
+                <p class="to"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Uždaryti</button>
+@*                <button type="button" class="btn btn-primary">Išsaugoti</button>*@
+            </div>
         </div>
     </div>
 </div>

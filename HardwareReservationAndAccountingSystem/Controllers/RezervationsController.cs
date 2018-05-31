@@ -26,7 +26,8 @@ namespace HardwareReservationAndAccountingSystem.Controllers
             var viewModel = new ReservationPage
             {
                 EquipmentBundles = bundles,
-                Reservation = new Reservation()
+                Reservation = new Reservation(),
+                Reservations = _context.Reservations.ToList(),
             };
 
             return View(viewModel);
@@ -40,16 +41,21 @@ namespace HardwareReservationAndAccountingSystem.Controllers
 
             reservation.CreatedOn = DateTime.Now;
             reservation.UpdatedOn = DateTime.Now;
-            if (User.IsInRole("admin"))
-            {
-                reservation.ReservationStatusId = 2;
-            }
-            else
-            {
-                reservation.ReservationStatusId = 1;
-            }
+            reservation.ReservationStatusId = (byte)(User.IsInRole("admin") ? 2 : 1);
             reservation.EquipmentBundle = bundle;
             reservation.UserId = User.Identity.GetUserId();
+
+            //var notification = new Notification
+            //{
+            //    Topic = "Rezervacija sukurta",
+            //    Description = "Rezervacija įrangos komplektui \"" + bundle.Title + "\" sėkmingai sukurta.",
+            //    CreatedOn = DateTime.Now,
+            //    IsRead = false,
+            //    IsArchived = false,
+            //    ReservationId = reservation.Id
+            //};
+
+            //reservation.Notifications.Add(notification);
 
             _context.Reservations.Add(reservation);
             _context.SaveChanges();

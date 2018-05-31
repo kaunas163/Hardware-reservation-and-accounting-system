@@ -32,6 +32,22 @@ $(document).ready(function () {
 
 $(function () {
 
+    var eventsData = $(".hidden-events-data .reservation-data-item");
+    var eventsArray = [];
+
+    for (var i = 0; i < eventsData.length; i++) {
+        var event = {
+            title: $(eventsData[i]).data("bundle"),
+            start: $(eventsData[i]).data("from"),
+            end: $(eventsData[i]).data("to"),
+            textColor: "white",
+            data: {
+                description: $(eventsData[i]).data("reservationid")
+            }
+        };
+        eventsArray.push(event);
+    }
+
     $('#calendar').fullCalendar({
         selectable: true,
         header: {
@@ -51,7 +67,27 @@ $(function () {
             $('#reservationModal, #equipmentBundleCalendarModal').modal({
                 focus: true
             });
-        }
+        },
+        eventClick: function (calEvent) {
+            //alert('Event: ' + calEvent.title);
+
+            $('#eventModal').on('show.bs.modal', function (event) {
+                var modal = $(this);
+
+                //var localDateFrom = $.fullCalendar.moment(startDate).format("YYYY-MM-DD HH:mm");
+                //var localDateTo = $.fullCalendar.moment(endDate).format("YYYY-MM-DD HH:mm");
+
+                modal.find(".title").text(calEvent.title);
+                modal.find(".from").text($.fullCalendar.moment(calEvent.start).format("YYYY-MM-DD HH:mm"));
+            modal.find(".to").text($.fullCalendar.moment(calEvent.end).format("YYYY-MM-DD HH:mm"));
+            });
+
+            $('#eventModal').modal({
+                focus: true
+            });
+
+        },
+        events: eventsArray
     });
 
 });
