@@ -33,7 +33,6 @@ namespace HardwareReservationAndAccountingSystem.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "admin")]
         public ActionResult Save(Reservation reservation)
         {
             var bundleId = Convert.ToInt32(Request.Form["equipmentBundles"]);

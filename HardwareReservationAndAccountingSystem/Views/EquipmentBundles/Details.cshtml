@@ -146,26 +146,32 @@
 <div class="modal fade" id="equipmentBundleCalendarModal" tabindex="-1" role="dialog" aria-labelledby="equipmentBundleCalendarModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Rezervacijos kūrimas</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Rezervuoti nuo</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" value="2018-05-27 12:00">
+            
+            @using (Html.BeginForm("Save", "Rezervations"))
+            {
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Rezervacijos kūrimas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Rezervuoti iki</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" value="2018-05-30 12:00">
+                <div class="modal-body">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Reservation.ReservedFrom)
+                        @Html.TextBoxFor(x => x.Reservation.ReservedFrom, new { id = "dateFrom", @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Reservation.ReservedTo)
+                        @Html.TextBoxFor(x => x.Reservation.ReservedTo, new { id = "dateTo", @class = "form-control" })
+                    </div>
+                    <input type="hidden" name="equipmentBundles" value="@Model.EquipmentBundle.Id" />
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Uždaryti</button>
-                <button type="button" class="btn btn-primary">Išsaugoti</button>
-            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Uždaryti</button>
+                    <button type="submit" class="btn btn-primary">Išsaugoti</button>
+                </div>
+            }
+           
         </div>
     </div>
 </div>

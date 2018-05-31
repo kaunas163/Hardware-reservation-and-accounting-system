@@ -10,5 +10,6 @@ namespace HardwareReservationAndAccountingSystem.ViewModels
     {
         public EquipmentBundle EquipmentBundle { get; set; }
         public List<Equipment> Equipments { get; set; }
+        public Reservation Reservation { get; set; }
     }
 }

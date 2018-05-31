@@ -38,7 +38,7 @@ $(function () {
             right: 'month,agendaWeek,agendaDay,listWeek prev,next'
         },
         select: function (startDate, endDate) {
-            $('#reservationModal').on('show.bs.modal', function (event) {
+            $('#reservationModal, #equipmentBundleCalendarModal').on('show.bs.modal', function (event) {
                 var modal = $(this);
 
                 var localDateFrom = $.fullCalendar.moment(startDate).format("YYYY-MM-DD HH:mm");
