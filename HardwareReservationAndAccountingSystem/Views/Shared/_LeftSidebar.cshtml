@@ -33,21 +33,30 @@
         <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Rezervations" ? "active" : "")">
             @Html.ActionLink("Rezervacijos", "Index", "Rezervations")
         </li>
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Equipments" ? "active" : "")">
+            @Html.ActionLink("Įranga", "Index", "Equipments")
+        </li>
+        <li class="">
+            <a href="#">Renginiai</a>
+        </li>
         <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Calendar" ? "active" : "")">
             @Html.ActionLink("Kalendorius", "Index", "Calendar")
         </li>
-        @if (User.IsInRole("admin"))
+        <li class="">
+            <a href="#">Vartotojai</a>
+        </li>
+        <li class="">
+            <a href="#">Nustatymai</a>
+        </li>
+        @*@if (User.IsInRole("admin"))
         {
-            <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Equipments" ? "active" : "")">
-                @Html.ActionLink("Įranga", "Index", "Equipments")
-            </li>
             <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "EquipmentTypes" ? "active" : "")">
                 @Html.ActionLink("Įrangos tipai", "Index", "EquipmentTypes")
             </li>
         }
         <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "EquipmentBundles" ? "active" : "")">
             @Html.ActionLink("Įrangos komplektai", "Index", "EquipmentBundles")
-        </li>
+        </li>*@
     </ul>
 </div>
 
