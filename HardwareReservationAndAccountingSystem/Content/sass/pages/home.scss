@@ -1,26 +1,26 @@
-﻿.content-block {
-    &.quick-link {
-        position: relative;
-        overflow: hidden;
-        padding: 2em;
+﻿// .content-block {
+//     &.quick-link {
+//         position: relative;
+//         overflow: hidden;
+//         padding: 2em;
 
-        i {
-            position: absolute;
-            font-size: 6em;
-            opacity: 0.1;
-            right: 0.25em;
-            top: 0.2em;
-        }
+//         i {
+//             position: absolute;
+//             font-size: 6em;
+//             opacity: 0.1;
+//             right: 0.25em;
+//             top: 0.2em;
+//         }
 
-        a {
-            color: $colorTextPrimary;
-            font-size: 1.25em;
-            transition: 0.2s all;
+//         a {
+//             color: $colorTextPrimary;
+//             font-size: 1.25em;
+//             transition: 0.2s all;
 
-            &:hover {
-                text-decoration: none;
-                color: $colorPrimaryLighter;
-            }
-        }
-    }
-}
+//             &:hover {
+//                 text-decoration: none;
+//                 color: $colorPrimaryLighter;
+//             }
+//         }
+//     }
+// }

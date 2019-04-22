@@ -1,8 +1,10 @@
-﻿// globals
-@import 'globals/fontawesome';
-
-// helpers
+﻿// helpers
 @import "helpers/variables";
+
+// globals
+@import 'globals/typography';
+@import 'globals/fontawesome';
+@import 'globals/buttons';
 
 // layout
 @import "layout/generic-layout-styles";

@@ -8,42 +8,72 @@
 
 <div class="row">
     <div class="col-md-4 col-sm-12 add-margin">
-        <div class="content-block quick-link">
-            <i class="fas fa-bell"></i>
-            @Html.ActionLink("Pranešimai", "Index", "Notifications")
+        <div class="content-block">
+            <div class="title">
+                <h3>Pranešimai</h3>
+            </div>
+            <div class="content">
+                <p>some content</p>
+            </div>
+            <!-- @Html.ActionLink("Pranešimai", "Index", "Notifications") -->
         </div>
     </div>
     <div class="col-md-4 col-sm-12 add-margin">
-        <div class="content-block quick-link">
-            <i class="fas fa-calendar-check"></i>
-            @Html.ActionLink("Rezervacijos", "Index", "Rezervations")
+        <div class="content-block">
+            <div class="title">
+                <h3>Rezervacijos</h3>
+            </div>
+            <div class="content">
+                <p>some content</p>
+            </div>
+            <!-- @Html.ActionLink("Rezervacijos", "Index", "Rezervations") -->
         </div>
     </div>
     <div class="col-md-4 col-sm-12 add-margin">
-        <div class="content-block quick-link">
-            <i class="fas fa-calendar-alt"></i>
-            @Html.ActionLink("Kalendorius", "Index", "Calendar")
+        <div class="content-block">
+            <div class="title">
+                <h3>Kalendorius</h3>
+            </div>
+            <div class="content">
+                <p>some content</p>
+            </div>
+            <!-- @Html.ActionLink("Kalendorius", "Index", "Calendar") -->
         </div>
     </div>
     @if (User.IsInRole("admin"))
     {
         <div class="col-md-4 col-sm-12 add-margin">
-            <div class="content-block quick-link">
-                <i class="fas fa-camera"></i>
-                @Html.ActionLink("Įranga", "Index", "Equipments")
+            <div class="content-block">
+                <div class="title">
+                    <h3>Įranga</h3>
+                </div>
+                <div class="content">
+                    <p>some content</p>
+                </div>
+                <!-- @Html.ActionLink("Įranga", "Index", "Equipments") -->
             </div>
         </div>
         <div class="col-md-4 col-sm-12 add-margin">
-            <div class="content-block quick-link">
-                <i class="fas fa-object-group"></i>
-                @Html.ActionLink("Įrangos tipai", "Index", "EquipmentTypes")
+            <div class="content-block">
+                <div class="title">
+                    <h3>Įrangos tipai</h3>
+                </div>
+                <div class="content">
+                    <p>some content</p>
+                </div>
+                <!-- @Html.ActionLink("Įrangos tipai", "Index", "EquipmentTypes") -->
             </div>
         </div>
     }
     <div class="col-md-4 col-sm-12 add-margin">
-        <div class="content-block quick-link">
-            <i class="fas fa-server"></i>
-            @Html.ActionLink("Įrangos komplektai", "Index", "EquipmentBundles")
+        <div class="content-block">
+            <div class="title">
+                <h3>Įrangos komplektai</h3>
+            </div>
+            <div class="content">
+                <p>some content</p>
+            </div>
+            <!-- @Html.ActionLink("Įrangos komplektai", "Index", "EquipmentBundles") -->
         </div>
     </div>
 </div>

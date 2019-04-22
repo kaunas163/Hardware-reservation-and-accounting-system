@@ -4,7 +4,7 @@
 </div>
 
 <div class="profile">
-    <img src="http://via.placeholder.com/120x120" alt="Profile picture" />
+    <img src="http://via.placeholder.com/150" alt="Profile picture" />
     
     @if (Request.IsAuthenticated)
     {
@@ -12,8 +12,8 @@
         {
             @Html.AntiForgeryToken()
 
-            <p>@User.Identity.GetUserName()</p>
-            <p class="logged-in-as-admin">@(User.IsInRole("admin") ? "Administratorius" : null)</p>
+            <p class="logged-in-as">Prisijungta kaip <span>@User.Identity.GetUserName()</span></p>
+            <p class="logged-in-role">@(User.IsInRole("admin") ? "Administratorius" : null)</p>
 
             @*@Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })*@
             <a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-primary btn-sm logoff-button">Atsijungti</a>

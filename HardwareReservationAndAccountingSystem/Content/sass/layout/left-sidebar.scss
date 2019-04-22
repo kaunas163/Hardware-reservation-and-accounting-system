@@ -2,62 +2,61 @@
     background: $colorAlmostWhite;
     box-shadow: 0 0 20px 0 rgba(black, 0.1);
     min-height: 100vh;
-    padding: 0;
+    padding: 2em 0;
     margin-bottom: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 100;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-start;
 
-    & > div:not(.navbar-links),
-    footer {
-        margin: 2em 2.5em;
-        text-align: center;
+    & > * {
+        margin: 0 2.5em 2em;
     }
 
     .logo {
         padding: 0.75em 0 0.25em;
+        text-align: center;
 
         h1 {
-            font-size: 1.5em;
-            font-weight: bold;
-
-            a {
-                color: $colorTextPrimary;
-            }
+            font-size: 30px;
+            font-weight: 700;
         }
     }
 
     .profile {
+        text-align: center;
+
         img {
             border-radius: 50%;
-            margin-bottom: 0.75em;
+            margin-bottom: 1em;
         }
 
         p {
-            text-transform: uppercase;
-            color: $colorTextSecondary;
-            font-size: 0.75em;
-            letter-spacing: 2px;
-            font-weight: bold;
-            margin-bottom: 0.25em;
+            font-size: 14px;
+            margin-bottom: 1px;
 
-            &.logged-in-as-admin {
-                text-transform: capitalize;
-                color: $colorTextPrimary;
-                font-weight: lighter;
+            &.logged-in-as {
+                color: #344750;
+                font-weight: 400;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            &.logged-in-role {
+                color: #929CA1;
                 font-style: italic;
             }
         }
 
         .logoff-button {
+            font-size: 14px;
             margin-top: 1em;
         }
     }
 
     .navbar-links {
-        margin: 2em 0;
+        margin: 0 0 2em;
 
         ul {
             padding-left: 0;
@@ -65,32 +64,41 @@
 
             a {
                 display: block;
-                padding: 1em 2.5em;
+                padding: 12px 2.5em;
                 text-transform: uppercase;
-                font-size: 0.9em;
+                font-size: 14px;
+                text-decoration: none;
+                transition: 0.3s all;
             }
 
             li {
                 border-left: 5px solid transparent;
 
                 &:hover {
-                    background: $colorSecondaryLighter;
-                    //border-left-color: $colorSecondaryLighter !important;
                     a {
-                        text-decoration: none;
-                        color: $colorAlmostWhite !important;
+                        font-weight: 700;
+                        color: #344750;
                     }
                 }
+
+                // &:hover {
+                    // background: $colorSecondaryLighter;
+
+                    // a {
+                    //     text-decoration: none;
+                    //     color: $colorAlmostWhite !important;
+                    // }
+                // }
             }
 
             &.first-level {
                 & > li {
                     &.active {
-                        border-left-color: $colorPrimaryDarker;
+                        border-left-color: #FF6F11;
 
                         a {
-                            color: $colorTextPrimary;
-                            font-weight: bold;
+                            color: #344750;
+                            font-weight: 700;
                         }
                     }
 
@@ -111,6 +119,8 @@
     }
 
     footer {
-        font-size: 0.75em;
+        font-size: 12px;
+        text-align: center;
+        color: #344750;
     }
 }
