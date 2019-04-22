@@ -184,6 +184,17 @@ $(".equipment-or-bundle-list-item-with-selection").on("click", function () {
 });
 
 /* =================================================================
+   Export modal
+================================================================= */
+
+$(document).ready(function() {
+    $('.export-modal .modal-body .filter-group .buttons-group .btn').on('click', function() {
+        $(this).siblings().removeClass('btn-dark').addClass('btn-link')
+        $(this).removeClass('btn-link').addClass('btn-dark');
+    });
+});
+
+/* =================================================================
    ...
 ================================================================= */
 
