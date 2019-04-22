@@ -88,6 +88,8 @@
 
     &.important {
         border: 2px solid #FF8F8F;
+        // box-shadow: 0 0 10px #FF8F8F;
+        // border-left: 3px solid red;
 
         & > .title {
             h3 {
