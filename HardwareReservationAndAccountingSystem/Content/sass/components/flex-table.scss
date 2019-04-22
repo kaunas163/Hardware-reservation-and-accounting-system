@@ -1,0 +1,22 @@
+.flex-table {
+    & > * {
+        display: flex;
+
+        & > * {
+            flex: 1;
+        }
+    }
+
+    .headings {
+        p {
+            font-weight: 700;
+            font-size: 14px;
+        }
+    }
+
+    // .data-row {
+    //     p {
+    //         // font-size: 12px;
+    //     }
+    // }
+}
