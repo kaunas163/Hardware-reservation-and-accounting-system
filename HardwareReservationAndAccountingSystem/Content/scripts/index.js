@@ -195,6 +195,26 @@ $(document).ready(function() {
 });
 
 /* =================================================================
+   View modes
+================================================================= */
+
+$(document).ready(function() {
+    $('.page-filters .view-mode .mode.btn').on('click', function() {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        $('.view-mode-content-block').removeClass('active');
+    });
+
+    $('.page-filters .view-mode .mode.btn.mode-list').on('click', function() {
+        $('.view-mode-content-block.view-mode-list').addClass('active');
+    });
+
+    $('.page-filters .view-mode .mode.btn.mode-table').on('click', function() {
+        $('.view-mode-content-block.view-mode-table').addClass('active');
+    });
+});
+
+/* =================================================================
    ...
 ================================================================= */
 

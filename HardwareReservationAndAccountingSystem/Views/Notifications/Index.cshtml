@@ -93,23 +93,19 @@
         </div>
         <div class="view-mode">
             <p class="filter-type-text">Peržiūros būdas:</p>
-            <div class="mode active">
-                <button class="btn btn-light">
-                    <i class="fas fa-list"></i>
-                    Sąrašas
-                </button>
-            </div>
-            <div class="mode">
-                <button class="btn btn-light">
-                    <i class="fas fa-table"></i>
-                    Lentelė
-                </button>
-            </div>
+            <button class="btn btn-light mode mode-list active">
+                <i class="fas fa-list"></i>
+                Sąrašas
+            </button>
+            <button class="btn btn-light mode mode-table">
+                <i class="fas fa-table"></i>
+                Lentelė
+            </button>
         </div>
     </div>
 }
 
-<div class="row">
+<div class="row view-mode-content-block view-mode-list active">
     <div class="col-md-12 add-margin">
         <div class="content-block important">
             <div class="title">
@@ -228,6 +224,19 @@
             </div>
             <div class="content">
                 <p>Jūsų rezervacijos būsena įrangai "Komplektas renginio filmavimui" pakeista iš "Laukianti patvirtinimo" į "Patvirtinta".</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row view-mode-content-block view-mode-table">
+    <div class="col-md-12 add-margin">
+        <div class="content-block">
+            <div class="title">
+                <h3>Pranešimai</h3>
+            </div>
+            <div class="content">
+                table
             </div>
         </div>
     </div>

@@ -131,6 +131,7 @@
                 font-weight: 400;
                 border-radius: 14px;
                 padding: 2px 15px;
+                background: white;
             }
         }
 
@@ -138,17 +139,14 @@
 
         .view-mode {
             .mode {
-                .btn {
-                    i {
-                        margin-right: 5px;
-                    }
+                i {
+                    margin-right: 5px;
                 }
                 
                 &.active {
-                    .btn {
-                        font-weight: 700;
-                        color: #344750;
-                    }
+                    font-weight: 700;
+                    color: #344750;
+                    background: white;
                 }
             }
         }
