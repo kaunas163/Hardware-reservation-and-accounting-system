@@ -16,35 +16,39 @@
     .page-sub-nav {
         text-align: right;
 
-        ul {
-            padding-left: 0;
-            margin-bottom: 0;
-
-            li {
-                list-style: none;
-                display: inline-block;
-
-                a {
-                    color: $colorTextSecondary;
-                    display: block;
-                    border-bottom: 3px solid transparent;
-                    margin-left: 1.5em;
-
-                    &:hover {
-                        text-decoration: none;
-                        color: $colorTextPrimary;
-                        border-bottom-color: $colorTextPrimary;
-                    }
-                }
-
-                &.active {
-                    a {
-                        color: $colorTextPrimary;
-                        border-bottom-color: $colorTextPrimary;
-                    }
-                }
-            }
+        .btn {
+            font-size: 14px;
         }
+
+        // ul {
+        //     padding-left: 0;
+        //     margin-bottom: 0;
+
+        //     li {
+        //         list-style: none;
+        //         display: inline-block;
+
+        //         a {
+        //             color: $colorTextSecondary;
+        //             display: block;
+        //             border-bottom: 3px solid transparent;
+        //             margin-left: 1.5em;
+
+        //             &:hover {
+        //                 text-decoration: none;
+        //                 color: $colorTextPrimary;
+        //                 border-bottom-color: $colorTextPrimary;
+        //             }
+        //         }
+
+        //         &.active {
+        //             a {
+        //                 color: $colorTextPrimary;
+        //                 border-bottom-color: $colorTextPrimary;
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     // TODO: move to components

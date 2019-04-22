@@ -9,15 +9,9 @@
 }
 
 @section PageHeaderSubNavLinks {
-    <ul>
-        <li class="active"><a href="#">Visi pranešimai</a></li>
-        <li><a href="#">Neskaityta</a></li>
-        <li><a href="#">Archyvuota</a></li>
-        @if (User.IsInRole("admin"))
-        {
-            <li><a href="#">Naujas pranešimas</a></li>
-        }
-    </ul>
+    @Html.ActionLink("Visi pranešimai", "Index", "Notifications", null, new { @class = "btn btn-dark" })
+    <button class="btn btn-primary">Eksportuoti</button>
+    <button class="btn btn-success">Naujas</button>
 }
 
 @section PageHeaderFilters {

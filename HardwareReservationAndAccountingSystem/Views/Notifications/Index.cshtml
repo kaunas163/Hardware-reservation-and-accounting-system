@@ -9,15 +9,9 @@
 }
 
 @section PageHeaderSubNavLinks {
-    <ul>
-        <li class="active"><a href="#">Visi pranešimai</a></li>
-        <li><a href="#">Neskaityta</a></li>
-        <li><a href="#">Archyvuota</a></li>
-        @if (User.IsInRole("admin"))
-        {
-            <li><a href="#">Naujas pranešimas</a></li>
-        }
-    </ul>
+    @Html.ActionLink("Visi pranešimai", "Index", "Notifications", null, new { @class = "btn btn-dark" })
+    <button class="btn btn-primary">Eksportuoti</button>
+    <button class="btn btn-success">Naujas</button>
 }
 
 @section PageHeaderFilters {
@@ -27,62 +21,125 @@
 }
 
 <div class="row">
-    @for (int i = 1; i <= 3; i++)
-    {
-        <div class="col-md-12 add-margin">
-            <div class="content-block list-view notification unread">
-                <div class="row">
-                    <div class="col-md-10">
-                        <div class="heading">
-                            <p>Neperskaityto pranešimo #@i tema</p>
-                        </div>
-                        <div class="description">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-2 options">
-                        @Html.ActionLink("Žūrėti", "Details", "Notifications", null, new { @class = "btn btn-secondary" })
-
-                        @*<div class="dropdown">
-                            <a class="btn btn-secondary more-options dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-ellipsis-h"></i>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>*@
-                    </div>
-                </div>
+    <div class="col-md-12 add-margin">
+        <div class="content-block important">
+            <div class="title">
+                <h3>
+                    @Html.ActionLink("Rezervacija", "Details", "Notifications")
+                </h3>
+                <ul class="sub-info">
+                    <li class="important">Naujas pranešimas</li>
+                    <li>2019-03-16 21:10</li>
+                    <li>rezervacijos atnaujinimas</li>
+                    <li>pranešimas nuo sistemos</li>
+                </ul>
+            </div>
+            <div class="content">
+                <p>Jūsų rezervacijos būsena įrangai "Komplektas renginio filmavimui" pakeista iš "Laukianti patvirtinimo" į "Patvirtinta".</p>
             </div>
         </div>
-    }
-
-    @for (int i = 1; i <= 6; i++)
-    {
-        <div class="col-md-12 add-margin">
-            <div class="content-block list-view notification">
-                <div class="row">
-                    <div class="col-md-10">
-                        <div class="heading">
-                            <p>Pranešimo #@i tema</p>
-                        </div>
-                        <div class="description">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-2 options">
-                        <a href="#" class="btn btn-secondary">Žiūrėti</a>
-                        @*<a href="#" class="more-options"><i class="fas fa-ellipsis-h"></i></a>*@
-                    </div>
-                </div>
+    </div>
+    <div class="col-md-12 add-margin">
+        <div class="content-block important">
+            <div class="title">
+                <h3>
+                    @Html.ActionLink("Priminimas", "Details", "Notifications")
+                </h3>
+                <ul class="sub-info">
+                    <li class="important">Naujas pranešimas</li>
+                    <li>2019-03-16 21:10</li>
+                    <li>rezervacijos atnaujinimas</li>
+                    <li>pranešimas nuo sistemos</li>
+                </ul>
+            </div>
+            <div class="content">
+                <p>Jūsų rezervacijos būsena įrangai "Komplektas renginio filmavimui" pakeista iš "Laukianti patvirtinimo" į "Patvirtinta".</p>
             </div>
         </div>
-    }
+    </div>
+    <div class="col-md-12 add-margin">
+        <div class="content-block">
+            <div class="title">
+                <h3>
+                    @Html.ActionLink("Naujiena", "Details", "Notifications")
+                </h3>
+                <ul class="sub-info">
+                    <li>2019-03-16 21:10</li>
+                    <li>rezervacijos atnaujinimas</li>
+                    <li>pranešimas nuo sistemos</li>
+                </ul>
+            </div>
+            <div class="content">
+                <p>Jūsų rezervacijos būsena įrangai "Komplektas renginio filmavimui" pakeista iš "Laukianti patvirtinimo" į "Patvirtinta".</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 add-margin">
+        <div class="content-block">
+            <div class="title">
+                <h3>
+                    @Html.ActionLink("Renginys", "Details", "Notifications")
+                </h3>
+                <ul class="sub-info">
+                    <li>2019-03-16 21:10</li>
+                    <li>rezervacijos atnaujinimas</li>
+                    <li>pranešimas nuo sistemos</li>
+                </ul>
+            </div>
+            <div class="content">
+                <p>Jūsų rezervacijos būsena įrangai "Komplektas renginio filmavimui" pakeista iš "Laukianti patvirtinimo" į "Patvirtinta".</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 add-margin">
+        <div class="content-block">
+            <div class="title">
+                <h3>
+                    @Html.ActionLink("Rezervacija", "Details", "Notifications")
+                </h3>
+                <ul class="sub-info">
+                    <li>2019-03-16 21:10</li>
+                    <li>rezervacijos atnaujinimas</li>
+                    <li>pranešimas nuo sistemos</li>
+                </ul>
+            </div>
+            <div class="content">
+                <p>Jūsų rezervacijos būsena įrangai "Komplektas renginio filmavimui" pakeista iš "Laukianti patvirtinimo" į "Patvirtinta".</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 add-margin">
+        <div class="content-block">
+            <div class="title">
+                <h3>
+                    @Html.ActionLink("Naujiena", "Details", "Notifications")
+                </h3>
+                <ul class="sub-info">
+                    <li>2019-03-16 21:10</li>
+                    <li>rezervacijos atnaujinimas</li>
+                    <li>pranešimas nuo sistemos</li>
+                </ul>
+            </div>
+            <div class="content">
+                <p>Jūsų rezervacijos būsena įrangai "Komplektas renginio filmavimui" pakeista iš "Laukianti patvirtinimo" į "Patvirtinta".</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 add-margin">
+        <div class="content-block">
+            <div class="title">
+                <h3>
+                    @Html.ActionLink("Renginys", "Details", "Notifications")
+                </h3>
+                <ul class="sub-info">
+                    <li>2019-03-16 21:10</li>
+                    <li>rezervacijos atnaujinimas</li>
+                    <li>pranešimas nuo sistemos</li>
+                </ul>
+            </div>
+            <div class="content">
+                <p>Jūsų rezervacijos būsena įrangai "Komplektas renginio filmavimui" pakeista iš "Laukianti patvirtinimo" į "Patvirtinta".</p>
+            </div>
+        </div>
+    </div>
 </div>
