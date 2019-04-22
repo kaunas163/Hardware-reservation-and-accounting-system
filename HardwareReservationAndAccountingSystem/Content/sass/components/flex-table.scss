@@ -14,9 +14,28 @@
         }
     }
 
-    // .data-row {
-    //     p {
-    //         // font-size: 12px;
-    //     }
-    // }
+    &.styled-table {
+        p {
+            margin: 0;
+        }
+
+        & > * {
+            padding: 10px 20px;
+        }
+
+        .headings {
+            background: #F6F6F6;
+
+            p {
+                color: #344750;
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+
+        .data-row:nth-child(even) {
+            background: #F8F8F8;
+        }
+    }
 }
+
