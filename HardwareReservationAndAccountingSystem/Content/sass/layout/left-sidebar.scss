@@ -69,6 +69,12 @@
                 font-size: 14px;
                 text-decoration: none;
                 transition: 0.3s all;
+
+                span.badge {
+                    font-size: 12px;
+                    margin-left: 10px;
+                    transition: 0.2s all;
+                }
             }
 
             li {
@@ -78,17 +84,12 @@
                     a {
                         font-weight: 700;
                         color: #344750;
+
+                        span.badge {
+                            background-color: #344750;
+                        }
                     }
                 }
-
-                // &:hover {
-                    // background: $colorSecondaryLighter;
-
-                    // a {
-                    //     text-decoration: none;
-                    //     color: $colorAlmostWhite !important;
-                    // }
-                // }
             }
 
             &.first-level {
@@ -99,6 +100,10 @@
                         a {
                             color: #344750;
                             font-weight: 700;
+
+                            span.badge {
+                                background-color: #344750;
+                            }
                         }
                     }
 

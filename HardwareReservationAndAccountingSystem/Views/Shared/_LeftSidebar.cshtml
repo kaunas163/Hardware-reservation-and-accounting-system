@@ -28,7 +28,7 @@
             @Html.ActionLink("Pradžia", "Index", "Home")
         </li>
         <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Notifications" ? "active" : "")">
-            @Html.ActionLink("Pranešimai", "Index", "Notifications")
+            <a href="@Url.Action("Index", "Notifications")">Pranešimai <span class="badge badge-secondary">2</span></a>
         </li>
         <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Rezervations" ? "active" : "")">
             @Html.ActionLink("Rezervacijos", "Index", "Rezervations")
