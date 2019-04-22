@@ -194,10 +194,13 @@
     <Compile Include="Controllers\EquipmentBundlesController.cs" />
     <Compile Include="Controllers\EquipmentsController.cs" />
     <Compile Include="Controllers\EquipmentTypesController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NotificationsController.cs" />
     <Compile Include="Controllers\RezervationsController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -264,7 +267,11 @@
     <Compile Include="ViewModels\ReservationPage.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\scripts.min.js" />
     <Content Include="assets\styles.min.css" />
+    <Content Include="assets\webfonts\fa-brands-400.svg" />
+    <Content Include="assets\webfonts\fa-regular-400.svg" />
+    <Content Include="assets\webfonts\fa-solid-900.svg" />
     <Content Include="Content\fullcalendar.min.css" />
     <Content Include="Content\lightbox.min.css" />
     <Content Include="Content\scripts\index.js" />
@@ -275,22 +282,35 @@
     </Content>
     <Content Include="Content\sass\main.scss" />
     <Content Include="Content\sass\helpers\variables.scss" />
-    <Content Include="Content\sass\shared\layout\left-sidebar.scss" />
-    <Content Include="Content\sass\shared\layout\page-content-container.scss" />
-    <Content Include="Content\sass\shared\layout\page-header.scss" />
     <Content Include="Content\sass\pages\home.scss" />
-    <Content Include="Content\sass\shared\layout\generic-layout-styles.scss" />
-    <Content Include="Content\sass\shared\content-blocks.scss" />
     <Content Include="Content\sass\pages\notifications.scss" />
     <Content Include="Content\sass\pages\equipment.scss" />
-    <Content Include="Content\sass\shared\content-grids\list.scss" />
-    <Content Include="Content\sass\shared\calendar.scss" />
     <Content Include="Content\sass\pages\equipment-type.scss" />
     <Content Include="Content\sass\pages\equipment-bundle.scss" />
-    <Content Include="Content\sass\shared\layout\authentication-layout.scss" />
-    <Content Include="Content\sass\shared\equipment-and-bundles-in-modals.scss" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
+    <Content Include="assets\webfonts\fa-brands-400.eot" />
+    <Content Include="assets\webfonts\fa-brands-400.ttf" />
+    <Content Include="assets\webfonts\fa-brands-400.woff" />
+    <Content Include="assets\webfonts\fa-brands-400.woff2" />
+    <Content Include="assets\webfonts\fa-regular-400.eot" />
+    <Content Include="assets\webfonts\fa-regular-400.ttf" />
+    <Content Include="assets\webfonts\fa-regular-400.woff" />
+    <Content Include="assets\webfonts\fa-regular-400.woff2" />
+    <Content Include="assets\webfonts\fa-solid-900.eot" />
+    <Content Include="assets\webfonts\fa-solid-900.ttf" />
+    <Content Include="assets\webfonts\fa-solid-900.woff" />
+    <Content Include="assets\webfonts\fa-solid-900.woff2" />
+    <Content Include="Content\sass\components\calendar.scss" />
+    <Content Include="Content\sass\components\equipment-and-bundles-in-modals.scss" />
+    <Content Include="Content\sass\globals\fontawesome.scss" />
+    <Content Include="Content\sass\layout\authentication-layout.scss" />
+    <Content Include="Content\sass\layout\content-blocks.scss" />
+    <Content Include="Content\sass\layout\content\list.scss" />
+    <Content Include="Content\sass\layout\generic-layout-styles.scss" />
+    <Content Include="Content\sass\layout\left-sidebar.scss" />
+    <Content Include="Content\sass\layout\page-content-container.scss" />
+    <Content Include="Content\sass\layout\page-header.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\fullcalendar-lt-locale.js" />
     <Content Include="Scripts\fullcalendar.min.js" />
@@ -358,6 +378,9 @@
     <Content Include="Views\Shared\_AuthenticationLayout.cshtml" />
     <Content Include="Views\EquipmentBundles\EquipmentListForAdding.cshtml" />
     <Content Include="Views\EquipmentBundles\RemoveEquipmentForm.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Settings\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

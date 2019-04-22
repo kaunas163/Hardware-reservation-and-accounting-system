@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Vartotojai";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section PageHeaderTitle {
+    <h2>Vartotojai</h2>
+}
+
+@section PageHeaderSubNavLinks {
+    @Html.ActionLink("Visi vartotojai", "Index", "Users", null, new { @class = "btn btn-dark" })
+    <button class="btn btn-primary">Eksportuoti</button>
+    <button class="btn btn-success">Naujas</button>
+}
+
+<div class="row">
+    <div class="col-md-12 add-margin">
+        <div class="content-block">
+            <div class="title">
+                <h3>
+                    Vartotojas
+                </h3>
+            </div>
+            <div class="content">
+                <p>some text</p>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -36,17 +36,17 @@
         <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Equipments" ? "active" : "")">
             @Html.ActionLink("Įranga", "Index", "Equipments")
         </li>
-        <li class="">
-            <a href="#">Renginiai</a>
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Events" ? "active" : "")">
+            @Html.ActionLink("Renginiai", "Index", "Events")
         </li>
         <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Calendar" ? "active" : "")">
             @Html.ActionLink("Kalendorius", "Index", "Calendar")
         </li>
-        <li class="">
-            <a href="#">Vartotojai</a>
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Users" ? "active" : "")">
+            @Html.ActionLink("Vartotojai", "Index", "Users")
         </li>
-        <li class="">
-            <a href="#">Nustatymai</a>
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Settings" ? "active" : "")">
+            @Html.ActionLink("Nustatymai", "Index", "Settings")
         </li>
         @*@if (User.IsInRole("admin"))
         {
