@@ -5,14 +5,4 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: $colorTextPrimary;
-
-    a {
-        color: $colorTextPrimary;
-        transition: 0.3s all;
-        
-        &:hover {
-            text-decoration: none;
-            color: #4696FF;
-        }
-    }
 }
