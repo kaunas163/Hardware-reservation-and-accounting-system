@@ -4,18 +4,20 @@
 // helpers
 @import "helpers/variables";
 
-// shared components
-@import "shared/layout/generic-layout-styles";
-@import "shared/layout/left-sidebar";
-@import "shared/layout/page-content-container";
-@import "shared/layout/page-header";
-@import "shared/layout/authentication-layout";
-@import "shared/content-grids/list";
-@import "shared/content-blocks";
-@import "shared/calendar";
-@import "shared/equipment-and-bundles-in-modals";
+// layout
+@import "layout/generic-layout-styles";
+@import "layout/left-sidebar";
+@import "layout/page-content-container";
+@import "layout/page-header";
+@import "layout/authentication-layout";
+@import "layout/content-blocks";
+@import "layout/content/list";
 
-// individual pages
+// components
+@import 'components/calendar';
+@import "components/equipment-and-bundles-in-modals";
+
+// pages
 @import "pages/home";
 @import "pages/notifications";
 @import "pages/equipment";
