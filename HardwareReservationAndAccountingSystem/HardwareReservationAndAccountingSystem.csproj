@@ -201,6 +201,7 @@
     <Compile Include="Controllers\RezervationsController.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Data\ContentViewMode.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -311,6 +312,14 @@
     <Content Include="Content\sass\layout\left-sidebar.scss" />
     <Content Include="Content\sass\layout\page-content-container.scss" />
     <Content Include="Content\sass\layout\page-header.scss" />
+    <Content Include="Content\sass\layout\view-modes.scss" />
+    <Content Include="Content\sass\components\flex-table.scss" />
+    <Content Include="Content\sass\components\modal.scss" />
+    <Content Include="Content\sass\components\tabs.scss" />
+    <Content Include="Content\sass\globals\badges.scss" />
+    <Content Include="Content\sass\globals\buttons.scss" />
+    <Content Include="Content\sass\globals\links.scss" />
+    <Content Include="Content\sass\globals\typography.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\fullcalendar-lt-locale.js" />
     <Content Include="Scripts\fullcalendar.min.js" />
